@@ -26,13 +26,18 @@
 	font-weight: normal;
 	font-family: "MonaspaceArgon";
 }
-
+html,
+body {
+	height: 100vh;
+	width: 100vw;
+}
 ul,
 ol {
 	list-style: none;
 }
 
 a {
+	color: black;
 	text-decoration: none;
 }
 
@@ -43,7 +48,7 @@ img {
 }
 header {
 	/* where to set the color of the nav bar */
-	background: lightgray;
+	background: rgb(255, 35, 35);
 	text-align: left;
 	top: 0px;
 	position: fixed;
@@ -51,28 +56,128 @@ header {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	align-items: center; /* Ensure items are centered vertically */
+	align-items: center; /* Add padding for spacing */
+}
+
+header h1 {
+	font-size: 2em;
+	padding: 0.3em 1em;
+	transition: color 1s ease;
+	cursor: default;
+}
+header h1:hover {
+	color: white;
 }
 
 nav {
-	position: relative;
 	display: flex;
-	text-align: left;
 	align-items: center;
-	margin-bottom: 1em;
-	margin-top: 1em;
 }
 
 nav ul {
 	margin: 0;
-	padding: 0;
+	padding: 0 1em;
 	list-style: none;
 	display: flex;
-	justify-content: space-around; /* Distribute space around items */
-	width: auto; /* Remove width to prevent stretching */
+	gap: 1em; /* Add gap between nav items */
 }
 
 nav li {
-	margin-bottom: 1em;
-	margin-left: 1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1em 1em;
+}
+
+nav li:hover a {
+	font-size: 1.1em;
+	font-weight: 700;
+}
+
+a {
+	transition: font-size 0.5s ease, font-weight 0.5s ease;
+}
+.hero {
+	height: 50%;
+	display: flex;
+	flex-direction: column; /* Stack children vertically */
+	background: navajowhite;
+	background-size: cover;
+	justify-content: center; /* Center children vertically */
+	align-items: center; /* Center children horizontally */
+	font-family: "MonaspaceArgon";
+	position: relative; /* Position relative to place hero-type at the bottom */
+}
+
+.typed-out {
+	text-align: center;
+	overflow: hidden;
+	border-right: 0.15em solid orange;
+	white-space: nowrap;
+	font-size: 2.6rem;
+	width: 0;
+	animation: typing 1.5s steps(20, end) forwards, blinking 1s infinite,
+		deleting 1.5s steps(20, end) forwards 10s;
+}
+
+.hero-type {
+	padding: 5px;
+	width: 30%;
+	height: 2em;
+	display: block;
+	position: absolute; /* Position absolute to place it at the bottom */
+	bottom: 10px; /* Adjust as needed to place it near the bottom */
+}
+
+.hero-type:focus {
+	border-color: rgb(74, 255, 80); /* Change the border color to blue on focus */
+	outline: none; /* Remove the default outline */
+}
+
+@keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 16ch;
+	}
+}
+
+@keyframes blinking {
+	from {
+		border-color: transparent;
+	}
+	to {
+		border-color: orange;
+	}
+}
+
+@keyframes deleting {
+	from {
+		width: 16ch;
+	}
+	to {
+		width: 0;
+	}
+}
+
+.history {
+	height: 50%;
+	background-color: green;
+}
+@media (max-width: 600px) {
+	header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	nav ul {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	nav li {
+		width: 100%;
+		justify-content: flex-start;
+	}
 }
