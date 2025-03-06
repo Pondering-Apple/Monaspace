@@ -1,0 +1,78 @@
+@font-face {
+	font-family: "MonaspaceArgon";
+	src: url("Variable-fonts/MonaspaceArgonVarVF[wght,wdth,slnt].ttf");
+}
+@font-face {
+	font-family: "MonaspaceKrypton";
+	src: url("Variable-fonts/MonaspaceKryptonVarVF[wght,wdth,slnt].ttf");
+}
+@font-face {
+	font-family: "MonaspaceNeon";
+	src: url("Variable-fonts/MonaspaceNeonVarVF[wght,wdth,slnt].ttf");
+}
+@font-face {
+	font-family: "MonaspaceRadon";
+	src: url("Variable-fonts/MonaspaceRadonVarVF[wght,wdth,slnt].ttf");
+}
+@font-face {
+	font-family: "MonaspaceXenon";
+	src: url("Variable-fonts/MonaspaceXenonVarVF[wght,wdth,slnt].ttf");
+}
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	font-weight: normal;
+	font-family: "MonaspaceArgon";
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+header {
+	/* where to set the color of the nav bar */
+	background: lightgray;
+	text-align: left;
+	top: 0px;
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center; /* Ensure items are centered vertically */
+}
+
+nav {
+	position: relative;
+	display: flex;
+	text-align: left;
+	align-items: center;
+	margin-bottom: 1em;
+	margin-top: 1em;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	justify-content: space-around; /* Distribute space around items */
+	width: auto; /* Remove width to prevent stretching */
+}
+
+nav li {
+	margin-bottom: 1em;
+	margin-left: 1em;
+}
