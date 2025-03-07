@@ -109,18 +109,11 @@ a {
 	position: relative; /* Position relative to place hero-type at the bottom */
 }
 
-.typed-out {
-	text-align: center;
-	overflow: hidden;
-	border-right: 0.15em solid orange;
-	white-space: nowrap;
+.hero-type {
 	font-size: 2.6rem;
-	width: 0;
-	animation: typing 1.5s steps(20, end) forwards, blinking 1s infinite,
-		deleting 1.5s steps(20, end) forwards 10s;
 }
 
-.hero-type {
+.hero-input {
 	padding: 5px;
 	width: 30%;
 	height: 2em;
@@ -129,12 +122,12 @@ a {
 	bottom: 10px; /* Adjust as needed to place it near the bottom */
 }
 
-.hero-type:focus {
+.hero-input:focus {
 	border-color: rgb(74, 255, 80); /* Change the border color to blue on focus */
 	outline: none; /* Remove the default outline */
 }
 
-@keyframes typing {
+/* @keyframes typing {
 	from {
 		width: 0;
 	}
@@ -159,7 +152,7 @@ a {
 	to {
 		width: 0;
 	}
-}
+} */
 
 .history {
 	height: 50%;
