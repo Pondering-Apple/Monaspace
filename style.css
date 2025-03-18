@@ -84,6 +84,7 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center; /* Add padding for spacing */
+	border-bottom: 3px solid var(--primary);
 }
 
 header h1 {
@@ -119,7 +120,7 @@ nav li {
 }
 
 nav li:hover a {
-	font-size: 1.1em;
+	font-size: 1.2em;
 	font-weight: 700;
 }
 
@@ -253,14 +254,13 @@ main {
 }
 
 .hero {
-	height: 50%;
+	height: 60%;
 	display: flex;
 	flex-direction: column; /* Stack children vertically */
 	background: var(--background);
 	background-size: cover;
 	justify-content: center; /* Center children vertically */
 	align-items: center; /* Center children horizontally */
-	font-family: "MonaspaceArgon";
 	position: relative; /* Position relative to place hero-type at the bottom */
 }
 
@@ -284,6 +284,7 @@ main {
 	caret-color: var(--secondary);
 	color: var(--primary);
 	border-radius: 1rem;
+	margin-bottom: 3rem;
 }
 .hero-input:focus,
 .hero-input:hover {
@@ -300,16 +301,41 @@ main {
 	}
 }
 
-.font-set {
+.history {
+	height: 50%;
+	background-color: var(--background);
+	border-width: 3px 0px 3px 0px;
+	border-style: solid;
+	border-color: var(--primary);
+	padding: 3.3rem;
+}
+
+.superFamily {
+	color: white;
+}
+.superFamily > p:nth-child(1) {
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+
+.superFamily > p:nth-child(2) {
+	font-size: 5rem;
+	margin-bottom: 2rem;
+}
+.superFamily > p:nth-child(3) {
+	font-size: 4.5rem;
+	margin-bottom: 1.6rem;
+}
+.superFamily > p:nth-child(4) {
+	font-size: 2rem;
+}
+
+.superFamily .font-set {
 	height: 100vh;
 	width: 100vw;
 	background-color: yellow;
 }
 
-.history {
-	height: 50%;
-	background-color: green;
-}
 @media (max-width: 600px) {
 	header {
 		flex-direction: column;
