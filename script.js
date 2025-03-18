@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 let i = 0;
-let txt = "Lorem ipsum typing effect!";
+let txt = "MONASPACE By Github";
 let speed = 50; /* The speed/duration of the effect in milliseconds */
 let deleteDelay = 10000;
 let typeDelay = 3000;
@@ -27,19 +27,31 @@ function argonChange() {
 	document.body.style.fontFamily = fontStyles[0];
 	document.documentElement.style.setProperty("--primary", "#89deff");
 	document.documentElement.style.setProperty("--secondary", "#c4ebff");
-	document.documentElement.style.setProperty("--accent", "#89deff10");
+	document.documentElement.style.setProperty("--accent", "#314246");
 }
 function kryptonChange() {
 	document.body.style.fontFamily = fontStyles[1];
+	document.documentElement.style.setProperty("--primary", "#b889ff");
+	document.documentElement.style.setProperty("--secondary", "#dcc4ff");
+	document.documentElement.style.setProperty("--accent", "#372f46");
 }
 function neonChange() {
 	document.body.style.fontFamily = fontStyles[2];
+	document.documentElement.style.setProperty("--primary", "#fe7e73");
+	document.documentElement.style.setProperty("--secondary", "#ffb9b3");
+	document.documentElement.style.setProperty("--accent", "#442d2b");
 }
 function radonChange() {
 	document.body.style.fontFamily = fontStyles[3];
+	document.documentElement.style.setProperty("--primary", "#fef073");
+	document.documentElement.style.setProperty("--secondary", "#fff7af");
+	document.documentElement.style.setProperty("--accent", "#44422b");
 }
 function xenonChange() {
 	document.body.style.fontFamily = fontStyles[4];
+	document.documentElement.style.setProperty("--primary", "#4cffa0");
+	document.documentElement.style.setProperty("--secondary", "#8bffc1");
+	document.documentElement.style.setProperty("--accent", "#244633");
 }
 
 function typing() {
