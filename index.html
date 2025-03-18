@@ -8,21 +8,34 @@
 	</head>
 	<body>
 		<header>
-			<h1>MONASPACE</h1>
+			<h1 onclick="closeNav()">MONASPACE</h1>
 			<nav class="page-nav">
 				<ul>
 					<li><a href="#">History</a></li>
 					<li><a href="#">Variations</a></li>
-					<li><a href="#">Character Set</a></li>
+					<li class="dropdown-li" id="characterSet" onclick="openNav()">
+						<a>Font Family</a>
+					</li>
 				</ul>
 			</nav>
 		</header>
-		<!-- Hero section -->
-		<section class="hero">
-			<div id="hero-type" class="hero-type"></div>
-			<input id="hero-input" class="hero-input" type="search" />
-		</section>
-		<section class="history"></section>
+		<main id="content">
+			<div id="myNav" class="overlay">
+				<div class="overlay-content">
+					<div class="font-type argon">Argon</div>
+					<div class="font-type krypton">Krypton</div>
+					<div class="font-type neon">Neon</div>
+					<div class="font-type radon">Radon</div>
+					<div class="font-type xenon">Xenon</div>
+				</div>
+			</div>
+			<section id="hero" class="hero">
+				<div id="hero-type" class="hero-type"></div>
+				<input id="hero-input" class="hero-input" type="search" />
+			</section>
+			<section class="history"></section>
+		</main>
+		<!-- <section id="font-set" class="font-set"></section> -->
 		<script src="script.js"></script>
 	</body>
 </html>

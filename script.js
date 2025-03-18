@@ -4,22 +4,59 @@ document.addEventListener("DOMContentLoaded", function () {
 	heroInput.addEventListener("input", function () {
 		customType();
 	});
+	const characterButton = document.getElementById("characterSet");
+	characterButton.addEventListener("click", function () {
+		openNav();
+	});
 });
 
 let i = 0;
-let txt = "Lorem ipsum typing effect!"; /* The text */
+let txt = "Lorem ipsum typing effect!";
 let speed = 50; /* The speed/duration of the effect in milliseconds */
+let deleteDelay = 10000;
+let typeDelay = 3000;
 
 function typing() {
 	if (i < txt.length) {
 		document.getElementById("hero-type").innerHTML += txt.charAt(i);
-		i = i + 1;
+		i++;
 		setTimeout(typing, speed);
 	}
 }
 
+// function deleting () {
+// 	if (i > txt.length) {
+// 		set
+// 		document.getElementById("hero-type").innerHTML += txt.charAt(i);
+// 		i--;
+// 		setTimeout(deleting, speed);
+// 	}
+// }
+
 function customType() {
 	let input = document.getElementById("hero-input").value; // Use .value to get the input value
 	let hero = document.getElementById("hero-type");
-	hero.innerHTML = input; // Update the hero-type element with the input value
+	if (input.length == 0) {
+		hero.innerHTML = ""; // Clear the hero-type element
+		i = 0; // Reset the typing index
+		setTimeout(typing, typeDelay);
+	} else {
+		hero.innerHTML = input; // Update the hero-type element with the input value
+	}
 }
+
+function openNav() {
+	document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+	document.getElementById("myNav").style.width = "0%";
+}
+
+// function showSet() {
+// 	console.log("clicked");
+// 	let hero = document.getElementById("content");
+// 	let fontSet = document.getElementById("font-set");
+// 	hero.style.display = "none";
+// 	fontSet.style.display = "auto";
+// }

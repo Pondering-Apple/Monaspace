@@ -18,6 +18,26 @@
 	font-family: "MonaspaceXenon";
 	src: url("Variable-fonts/MonaspaceXenonVarVF[wght,wdth,slnt].ttf");
 }
+
+:root {
+	--background: #1a1a1a;
+	--argon-primary: #89deff;
+	--argon-secondary: #c4ebff;
+	--argon-accent: #89deff10;
+	--krypton-primary: #b889ff;
+	--krypton-secondary: #dcc4ff;
+	--krypton-accent: #b889ff10;
+	--neon-primary: #fe7e73;
+	--neon-secondary: #ffb9b3;
+	--neon-accent: #fe7e7310;
+	--radon-primary: #fef073;
+	--radon-secondary: #fff7af;
+	--radon-accent: #fef07310;
+	--xenon-primary: #4cffa0;
+	--xenon-secondary: #8bffc1;
+	--xenon-accent: #4cffa010;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -48,7 +68,7 @@ img {
 }
 header {
 	/* where to set the color of the nav bar */
-	background: rgb(255, 35, 35);
+	background: #ff1e1e;
 	text-align: left;
 	top: 0px;
 	position: fixed;
@@ -97,6 +117,105 @@ nav li:hover a {
 a {
 	transition: font-size 0.5s ease, font-weight 0.5s ease;
 }
+
+.overlay {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 7%;
+	left: 0;
+	background-color: var(--background);
+	background-color: var(--background);
+	overflow-x: hidden;
+	transition: 0.5s;
+}
+
+.overlay-content {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+}
+
+.font-type {
+	border-right: 3px solid white;
+	height: 100%;
+	width: 20%;
+	color: white;
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+
+.argon:hover {
+	color: var(--argon-primary);
+	background-color: var(--argon-accent);
+	border-right: var(--argon-primary);
+	width: 25%;
+}
+.krypton:hover {
+	color: var(--krypton-primary);
+	background-color: var(--krypton-accent);
+	border-right: var(--krypton-primary);
+	border-left: var(--krypton-primary);
+	width: 25%;
+}
+.neon:hover {
+	color: var(--neon-primary);
+	background-color: var(--neon-accent);
+	border-right: var(--neon-primary);
+	width: 25%;
+}
+.radon:hover {
+	color: var(--radon-primary);
+	background-color: var(--radon-accent);
+	border-right: var(--radon-primary);
+	width: 25%;
+}
+.xenon:hover {
+	color: var(--xenon-primary);
+	background-color: var(--xenon-accent);
+	border-right: var(--xenon-primary);
+	width: 25%;
+}
+
+.overlay a {
+	padding: 8px;
+	text-decoration: none;
+	font-size: 36px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+	color: #f1f1f1;
+}
+
+.overlay .closebtn {
+	position: absolute;
+	top: 20px;
+	right: 45px;
+	font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+	.overlay a {
+		font-size: 20px;
+	}
+	.overlay .closebtn {
+		font-size: 40px;
+		top: 15px;
+		right: 35px;
+	}
+}
+main {
+	height: 100vh;
+}
+
 .hero {
 	height: 50%;
 	display: flex;
@@ -110,7 +229,9 @@ a {
 }
 
 .hero-type {
+	border-right: 0.15em solid orange;
 	font-size: 2.6rem;
+	animation: blinking 1s infinite;
 }
 
 .hero-input {
@@ -127,15 +248,6 @@ a {
 	outline: none; /* Remove the default outline */
 }
 
-/* @keyframes typing {
-	from {
-		width: 0;
-	}
-	to {
-		width: 16ch;
-	}
-}
-
 @keyframes blinking {
 	from {
 		border-color: transparent;
@@ -145,14 +257,11 @@ a {
 	}
 }
 
-@keyframes deleting {
-	from {
-		width: 16ch;
-	}
-	to {
-		width: 0;
-	}
-} */
+.font-set {
+	height: 100vh;
+	width: 100vw;
+	background-color: yellow;
+}
 
 .history {
 	height: 50%;
