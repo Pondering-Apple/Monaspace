@@ -84,7 +84,7 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center; /* Add padding for spacing */
-	border-bottom: 3px solid var(--primary);
+	border-bottom: 3px solid black;
 }
 
 header h1 {
@@ -94,8 +94,18 @@ header h1 {
 	transition: color 1s ease;
 	cursor: default;
 }
-header h1:hover {
-	color: white;
+header h1 > div {
+	display: inline;
+}
+header h1 > div:hover span {
+	font-weight: 500;
+	cursor: pointer;
+}
+header h1 > span > a {
+	font-size: 1rem;
+}
+header h1 > span > a:hover {
+	font-weight: 600;
 }
 
 nav {
@@ -128,11 +138,32 @@ a {
 	transition: font-size 0.5s ease, font-weight 0.5s ease;
 }
 
+.L1 {
+	font-family: "MonaspaceArgon";
+	color: var(--argon-primary);
+}
+.L2 {
+	font-family: "MonaspaceKrypton";
+	color: var(--krypton-primary);
+}
+.L3 {
+	font-family: "MonaspaceNeon";
+	color: var(--neon-primary);
+}
+.L4 {
+	font-family: "MonaspaceRadon";
+	color: var(--radon-primary);
+}
+.L5 {
+	font-family: "MonaspaceXenon";
+	color: var(--xenon-primary);
+}
+
 .overlay {
 	height: 100%;
 	width: 0;
 	position: fixed;
-	z-index: 1;
+	z-index: 1000;
 	top: 6.5%;
 	left: 0;
 	background-color: var(--background);
@@ -151,7 +182,7 @@ a {
 }
 
 .font-type {
-	border-width: 0px 2px 0px 2px;
+	border-width: 2px 2px 0px 2px;
 	border-color: white;
 	border-style: solid;
 	height: 100%;
@@ -212,7 +243,7 @@ a {
 }
 
 .font-type:hover {
-	border-width: 0px 3px 0px 3px;
+	border-width: 3px 3px 0px 3px;
 	width: 20.5rem;
 	padding-left: 4.1rem;
 	z-index: 100;
