@@ -44,7 +44,7 @@
 	border: 0;
 	box-sizing: border-box;
 	font-weight: normal;
-	font-family: "MonaspaceArgon";
+	/* font-family: "MonaspaceArgon"; */
 }
 html,
 body {
@@ -123,7 +123,7 @@ a {
 	width: 0;
 	position: fixed;
 	z-index: 1;
-	top: 7%;
+	top: 6.5%;
 	left: 0;
 	background-color: var(--background);
 	background-color: var(--background);
@@ -141,8 +141,6 @@ a {
 }
 
 .font-type {
-	/* outline: 3px solid white; */
-	/* box-shadow: 0 0 0 1px white; */
 	border-width: 0px 2px 0px 2px;
 	border-color: white;
 	border-style: solid;
@@ -152,49 +150,78 @@ a {
 	cursor: pointer;
 	transition: all 0.5s ease;
 	margin-right: -2px;
+	text-align: left;
+	padding: 3.3rem;
+	display: flex;
+	flex-direction: column; /* Stack children vertically */
+	justify-content: space-around;
+}
+
+.name {
+	font-size: 2rem;
+}
+.type {
+	font-size: 1.2rem;
+}
+.family {
+	font-size: 1.3rem;
+}
+.example-text {
+	font-size: 1.7rem;
+}
+
+.argon {
+	font-family: "MonaspaceArgon";
+}
+.krypton {
+	font-family: "MonaspaceKrypton";
+}
+.neon {
+	font-family: "MonaspaceNeon";
+}
+.radon {
+	font-family: "MonaspaceRadon";
+}
+.xenon {
+	font-family: "MonaspaceXenon";
+}
+
+.font-type:hover {
+	border-width: 0px 3px 0px 3px;
+	width: 20.5rem;
+	padding-left: 4.1rem;
+	z-index: 100;
 }
 
 .argon:hover {
 	color: var(--argon-primary);
 	background-color: var(--argon-accent);
-	border-color: var(--argon-primary); /*box-shadow: 0 0 0 4px*/
-	border-width: 0px 3px 0px 3px;
-	width: 22%;
-	z-index: 100;
+	border-color: var(--argon-primary);
 }
+
 .krypton:hover {
 	color: var(--krypton-primary);
 	background-color: var(--krypton-accent);
 	border-color: var(--krypton-primary);
-	border-width: 0px 3px 0px 3px;
-	width: 22%;
-	z-index: 100;
 }
+
 .neon:hover {
 	color: var(--neon-primary);
 	background-color: var(--neon-accent);
 	border-color: var(--neon-primary);
-	border-width: 0px 3px 0px 3px;
-	width: 22%;
-	z-index: 100;
 }
+
 .radon:hover {
 	color: var(--radon-primary);
 	background-color: var(--radon-accent);
 	border-color: var(--radon-primary);
-	border-width: 0px 3px 0px 3px;
-	width: 22%;
-	z-index: 100;
 }
+
 .xenon:hover {
 	color: var(--xenon-primary);
 	background-color: var(--xenon-accent);
 	border-color: var(--xenon-primary);
-	border-width: 0px 3px 0px 3px;
-	width: 22%;
-	z-index: 100;
 }
-
 .overlay a {
 	padding: 8px;
 	text-decoration: none;
