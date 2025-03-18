@@ -21,6 +21,9 @@
 
 :root {
 	--background: #1a1a1a;
+	--primary: white;
+	--secondary: white;
+	--accent: white;
 	--argon-primary: #89deff;
 	--argon-secondary: #c4ebff;
 	--argon-accent: #89deff10;
@@ -44,12 +47,14 @@
 	border: 0;
 	box-sizing: border-box;
 	font-weight: normal;
-	/* font-family: "MonaspaceArgon"; */
 }
 html,
 body {
 	height: 100vh;
 	width: 100vw;
+}
+body {
+	font-family: "MonaspaceArgon";
 }
 ul,
 ol {
@@ -57,7 +62,7 @@ ol {
 }
 
 a {
-	color: black;
+	color: rgb(255, 255, 255);
 	text-decoration: none;
 }
 
@@ -66,9 +71,10 @@ img {
 	height: auto;
 	display: block;
 }
+
 header {
 	/* where to set the color of the nav bar */
-	background: #ff1e1e;
+	background: var(--background);
 	text-align: left;
 	top: 0px;
 	position: fixed;
@@ -80,6 +86,7 @@ header {
 }
 
 header h1 {
+	color: white;
 	font-size: 2em;
 	padding: 0.3em 1em;
 	transition: color 1s ease;
@@ -172,18 +179,33 @@ a {
 
 .argon {
 	font-family: "MonaspaceArgon";
+	color: var(--argon-primary);
+	background-color: var(--argon-accent);
+	border-color: var(--argon-primary);
 }
 .krypton {
 	font-family: "MonaspaceKrypton";
+	color: var(--krypton-primary);
+	background-color: var(--krypton-accent);
+	border-color: var(--krypton-primary);
 }
 .neon {
 	font-family: "MonaspaceNeon";
+	color: var(--neon-primary);
+	background-color: var(--neon-accent);
+	border-color: var(--neon-primary);
 }
 .radon {
 	font-family: "MonaspaceRadon";
+	color: var(--radon-primary);
+	background-color: var(--radon-accent);
+	border-color: var(--radon-primary);
 }
 .xenon {
 	font-family: "MonaspaceXenon";
+	color: var(--xenon-primary);
+	background-color: var(--xenon-accent);
+	border-color: var(--xenon-primary);
 }
 
 .font-type:hover {
@@ -194,33 +216,18 @@ a {
 }
 
 .argon:hover {
-	color: var(--argon-primary);
-	background-color: var(--argon-accent);
-	border-color: var(--argon-primary);
 }
 
 .krypton:hover {
-	color: var(--krypton-primary);
-	background-color: var(--krypton-accent);
-	border-color: var(--krypton-primary);
 }
 
 .neon:hover {
-	color: var(--neon-primary);
-	background-color: var(--neon-accent);
-	border-color: var(--neon-primary);
 }
 
 .radon:hover {
-	color: var(--radon-primary);
-	background-color: var(--radon-accent);
-	border-color: var(--radon-primary);
 }
 
 .xenon:hover {
-	color: var(--xenon-primary);
-	background-color: var(--xenon-accent);
-	border-color: var(--xenon-primary);
 }
 .overlay a {
 	padding: 8px;
@@ -261,7 +268,7 @@ main {
 	height: 50%;
 	display: flex;
 	flex-direction: column; /* Stack children vertically */
-	background: navajowhite;
+	background: var(--background);
 	background-size: cover;
 	justify-content: center; /* Center children vertically */
 	align-items: center; /* Center children horizontally */
@@ -271,6 +278,7 @@ main {
 
 .hero-type {
 	border-right: 0.15em solid orange;
+	color: white;
 	font-size: 2.6rem;
 	animation: blinking 1s infinite;
 }

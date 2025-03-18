@@ -15,6 +15,29 @@ let txt = "Lorem ipsum typing effect!";
 let speed = 50; /* The speed/duration of the effect in milliseconds */
 let deleteDelay = 10000;
 let typeDelay = 3000;
+let fontStyles = [
+	"MonaspaceArgon",
+	"MonaspaceKrypton",
+	"MonaspaceNeon",
+	"MonaspaceRadon",
+	"MonaspaceXenon",
+];
+
+function argonChange() {
+	document.body.style.fontFamily = fontStyles[0];
+}
+function kryptonChange() {
+	document.body.style.fontFamily = fontStyles[1];
+}
+function neonChange() {
+	document.body.style.fontFamily = fontStyles[2];
+}
+function radonChange() {
+	document.body.style.fontFamily = fontStyles[3];
+}
+function xenonChange() {
+	document.body.style.fontFamily = fontStyles[4];
+}
 
 function typing() {
 	if (i < txt.length) {
@@ -24,14 +47,14 @@ function typing() {
 	}
 }
 
-// function deleting () {
-// 	if (i > txt.length) {
-// 		set
-// 		document.getElementById("hero-type").innerHTML += txt.charAt(i);
-// 		i--;
-// 		setTimeout(deleting, speed);
-// 	}
-// }
+function deleting() {
+	if (i > txt.length) {
+		set;
+		document.getElementById("hero-type").innerHTML += txt.charAt(i);
+		i--;
+		setTimeout(deleting, speed);
+	}
+}
 
 function customType() {
 	let input = document.getElementById("hero-input").value; // Use .value to get the input value
@@ -52,11 +75,3 @@ function openNav() {
 function closeNav() {
 	document.getElementById("myNav").style.width = "0%";
 }
-
-// function showSet() {
-// 	console.log("clicked");
-// 	let hero = document.getElementById("content");
-// 	let fontSet = document.getElementById("font-set");
-// 	hero.style.display = "none";
-// 	fontSet.style.display = "auto";
-// }
