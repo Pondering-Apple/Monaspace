@@ -25,6 +25,9 @@ let fontStyles = [
 
 function argonChange() {
 	document.body.style.fontFamily = fontStyles[0];
+	document.documentElement.style.setProperty("--primary", "#89deff");
+	document.documentElement.style.setProperty("--secondary", "#c4ebff");
+	document.documentElement.style.setProperty("--accent", "#89deff10");
 }
 function kryptonChange() {
 	document.body.style.fontFamily = fontStyles[1];

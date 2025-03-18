@@ -21,24 +21,24 @@
 
 :root {
 	--background: #1a1a1a;
-	--primary: white;
-	--secondary: white;
-	--accent: white;
+	--primary: #89deff;
+	--secondary: #c4ebff;
+	--accent: #314246;
 	--argon-primary: #89deff;
 	--argon-secondary: #c4ebff;
-	--argon-accent: #89deff10;
+	--argon-accent: #314246;
 	--krypton-primary: #b889ff;
 	--krypton-secondary: #dcc4ff;
-	--krypton-accent: #b889ff10;
+	--krypton-accent: #372f46;
 	--neon-primary: #fe7e73;
 	--neon-secondary: #ffb9b3;
-	--neon-accent: #fe7e7310;
+	--neon-accent: #442d2b;
 	--radon-primary: #fef073;
 	--radon-secondary: #fff7af;
-	--radon-accent: #fef07310;
+	--radon-accent: #44422b;
 	--xenon-primary: #4cffa0;
 	--xenon-secondary: #8bffc1;
-	--xenon-accent: #4cffa010;
+	--xenon-accent: #244633;
 }
 
 * {
@@ -52,6 +52,7 @@ html,
 body {
 	height: 100vh;
 	width: 100vw;
+	background-color: var(--background);
 }
 body {
 	font-family: "MonaspaceArgon";
@@ -114,6 +115,7 @@ nav li {
 	justify-content: center;
 	align-items: center;
 	padding: 1em 1em;
+	cursor: pointer;
 }
 
 nav li:hover a {
@@ -215,20 +217,6 @@ a {
 	z-index: 100;
 }
 
-.argon:hover {
-}
-
-.krypton:hover {
-}
-
-.neon:hover {
-}
-
-.radon:hover {
-}
-
-.xenon:hover {
-}
 .overlay a {
 	padding: 8px;
 	text-decoration: none;
@@ -277,7 +265,7 @@ main {
 }
 
 .hero-type {
-	border-right: 0.15em solid orange;
+	border-right: 0.15em solid var(--primary);
 	color: white;
 	font-size: 2.6rem;
 	animation: blinking 1s infinite;
@@ -285,15 +273,21 @@ main {
 
 .hero-input {
 	padding: 5px;
-	width: 30%;
-	height: 2em;
+	width: 40%;
+	height: 3em;
 	display: block;
-	position: absolute; /* Position absolute to place it at the bottom */
+	position: absolute;
+	background-color: #282828; /* Position absolute to place it at the bottom */
 	bottom: 10px; /* Adjust as needed to place it near the bottom */
+	border-bottom: 2px solid var(--secondary);
+	transition: 0.5s;
+	caret-color: var(--secondary);
+	color: var(--primary);
+	border-radius: 1rem;
 }
-
-.hero-input:focus {
-	border-color: rgb(74, 255, 80); /* Change the border color to blue on focus */
+.hero-input:focus,
+.hero-input:hover {
+	border-color: var(--secondary); /* Change the border color to blue on focus */
 	outline: none; /* Remove the default outline */
 }
 
@@ -302,7 +296,7 @@ main {
 		border-color: transparent;
 	}
 	to {
-		border-color: orange;
+		border-color: var(--primary);
 	}
 }
 
