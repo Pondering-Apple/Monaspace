@@ -198,7 +198,7 @@ a:visited {
 	align-items: center;
 	width: 100vw;
 	height: auto;
-	padding-top: 5rem;
+	padding: 5rem 0 5rem 0;
 }
 
 .argon {
@@ -253,6 +253,7 @@ body.container {
 	color: white;
 	position: relative;
 	text-align: left;
+	transition: all 0.5s;
 }
 
 @property --angle {
@@ -267,16 +268,6 @@ body.container {
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	background-image: conic-gradient(
-		from var(--angle),
-		transparent,
-		Red,
-		blue,
-		pink,
-		green,
-		orange,
-		Red
-	);
 	top: 50%;
 	left: 50%;
 	translate: -50% -50%;
@@ -285,9 +276,13 @@ body.container {
 	border-radius: 10px;
 }
 .card::before {
-	filter: blur(1.5rem);
-	opacity: 0.5;
+	filter: blur(2rem);
+	opacity: 0.9;
 }
+
+/* .argon {
+	border: 1px solid var(--argon-secondary);
+} */
 
 .argon::after,
 .argon::before {
@@ -295,7 +290,8 @@ body.container {
 		from var(--angle),
 		transparent,
 		var(--argon-primary),
-		var(--argon-secondary)
+		var(--argon-secondary),
+		var(--argon-primary)
 	);
 }
 
@@ -305,7 +301,8 @@ body.container {
 		from var(--angle),
 		transparent,
 		var(--krypton-primary),
-		var(--krypton-secondary)
+		var(--krypton-secondary),
+		var(--krypton-primary)
 	);
 }
 .neon::after,
@@ -314,7 +311,8 @@ body.container {
 		from var(--angle),
 		transparent,
 		var(--neon-primary),
-		var(--neon-secondary)
+		var(--neon-secondary),
+		var(--neon-primary)
 	);
 }
 .radon::after,
@@ -323,7 +321,8 @@ body.container {
 		from var(--angle),
 		transparent,
 		var(--radon-primary),
-		var(--radon-secondary)
+		var(--radon-secondary),
+		var(--radon-primary)
 	);
 }
 .xenon::after,
@@ -332,14 +331,22 @@ body.container {
 		from var(--angle),
 		transparent,
 		var(--xenon-primary),
-		var(--xenon-secondary)
+		var(--xenon-secondary),
+		var(--xenon-primary)
 	);
+}
+.xenon:hover {
+	background-color: var(--xenon-accent);
+}
+
+.card:hover p {
+	font-weight: 500;
 }
 
 .card:hover::before,
 .card:hover::after {
 	opacity: 1; /* Make the pseudo-elements visible on hover */
-	animation: spin 3s linear infinite; /* Trigger the animation */
+	animation: spin 5s linear infinite; /* Trigger the animation */
 }
 
 @keyframes spin {
@@ -366,4 +373,31 @@ body.container {
 .word-list {
 	font-size: 1.3rem;
 	line-height: 1.8rem;
+}
+
+.type-set {
+	padding: 7rem;
+}
+
+.letter,
+.number,
+.special-char {
+	line-height: 1.8rem;
+}
+
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 2rem 0 2rem 0;
+	line-height: 1.8rem;
+}
+
+.link {
+	text-decoration: underline;
+}
+.link:hover {
+	font-weight: 600;
+	font-size: 1.1rem;
 }
