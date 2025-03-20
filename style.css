@@ -124,6 +124,7 @@ nav li:hover a {
 a {
 	transition: font-size 0.5s ease, font-weight 0.5s ease;
 	text-decoration: none;
+	color: white;
 }
 a:visited {
 	color: white;
@@ -198,20 +199,6 @@ a:visited {
 	width: 100vw;
 	height: auto;
 	padding-top: 5rem;
-	/* border-width: 2px 2px 0px 2px;
-	border-color: white;
-	border-style: solid;
-	height: 100%;
-	width: 20%;
-	color: white;
-	cursor: pointer;
-	transition: all 0.5s ease;
-	margin-right: -2px;
-	text-align: left;
-	padding: 3.3rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around; */
 }
 
 .argon {
@@ -258,13 +245,14 @@ body.container {
 
 .card {
 	margin: 0 auto;
-	padding: 2em;
+	padding: 1em 1.2em 1em 1.2em;
 	width: 170px;
 	background: rgb(46, 46, 46);
 	text-align: center;
 	border-radius: 10px;
 	color: white;
 	position: relative;
+	text-align: left;
 }
 
 @property --angle {
@@ -361,4 +349,21 @@ body.container {
 	to {
 		--angle: 360deg;
 	}
+}
+
+.symbol {
+	font-size: 2rem;
+	margin-bottom: 0.5rem;
+}
+.name {
+	font-size: 1.6rem;
+	margin-bottom: 0.3rem;
+}
+.type {
+	font-size: 0.9rem;
+	margin-bottom: 1.5rem;
+}
+.word-list {
+	font-size: 1.3rem;
+	line-height: 1.8rem;
 }

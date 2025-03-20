@@ -4,10 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	heroInput.addEventListener("input", function () {
 		customType();
 	});
-	const characterButton = document.getElementById("characterSet");
-	characterButton.addEventListener("click", function () {
-		openNav();
-	});
 });
 
 let i = 0;
@@ -94,12 +90,4 @@ function customType() {
 	} else {
 		hero.innerHTML = input; // Update the hero-type element with the input value
 	}
-}
-
-function openNav() {
-	document.getElementById("myNav").style.width = "100%";
-}
-
-function closeNav() {
-	document.getElementById("myNav").style.width = "0%";
 }
