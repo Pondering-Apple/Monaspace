@@ -3,10 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css" />
-		<title>MONASPACE SUPER FAMILY</title>
+		<link rel="stylesheet" href="cardAnimation.css" />
+		<title>MONASPACE</title>
 	</head>
-	<body>
+	<body class="container">
 		<header>
 			<h1 class="page-title" onclick="closeNav()">
 				<div>
@@ -32,208 +32,42 @@
 				</ul>
 			</nav>
 		</header>
-		<main id="content">
-			<!-- <div id="myNav" class="overlay">
-				<div class="overlay-content">
-					<div class="font-type argon" onclick="argonChange()">
-						<div class="title">
-							<p class="name">Argon</p>
-							<p class="type">Humanist Sans</p>
-						</div>
-						<div class="family">
-							<p>
-								Monaspace <br />
-								Superfamily Font
-							</p>
-						</div>
-						<div class="example-text">
-							<p>
-								Zebra <br />
-								Adorable <br />
-								Xylophone <br />
-								Dimension <br />
-								Moondust <br />
-								Geography
-							</p>
-						</div>
-					</div>
-					<div class="font-type krypton" onclick="kryptonChange()">
-						<div class="title">
-							<p class="name">Krypton</p>
-							<p class="type">Mechanical Sans</p>
-						</div>
-						<div class="family">
-							<p>
-								Monaspace <br />
-								Superfamily Font
-							</p>
-						</div>
-						<div class="example-text">
-							<p>
-								Lighthouse <br />
-								Backyard <br />
-								Journaled <br />
-								Trampled <br />
-								Overcome <br />
-								Whiskers
-							</p>
-						</div>
-					</div>
-					<div class="font-type neon" onclick="neonChange()">
-						<div class="title">
-							<p class="name">Neon</p>
-							<p class="type">Neo-grotesque Sans</p>
-						</div>
-						<div class="family">
-							<p>
-								Monaspace <br />
-								Superfamily Font
-							</p>
-						</div>
-						<div class="example-text">
-							<p>
-								Cypress <br />
-								Mandolin<br />
-								Jubilant <br />
-								Freight <br />
-								Slouched <br />
-								Boulders
-							</p>
-						</div>
-					</div>
-					<div class="font-type radon" onclick="radonChange()">
-						<div class="title">
-							<p class="name">Radon</p>
-							<p class="type">Handwriting</p>
-						</div>
-						<div class="family">
-							<p>
-								Monaspace <br />
-								Superfamily Font
-							</p>
-						</div>
-						<div class="example-text">
-							<p>
-								Graphite <br />
-								Conquest <br />
-								Drizzled <br />
-								Lanterns <br />
-								Swindle <br />
-								Junction
-							</p>
-						</div>
-					</div>
-					<div class="font-type xenon" onclick="xenonChange()">
-						<div class="title">
-							<p class="name">Xenon</p>
-							<p class="type">Slab Serif</p>
-						</div>
-						<div class="family">
-							<p>
-								Monaspace <br />
-								Superfamily Font
-							</p>
-						</div>
-						<div class="example-text">
-							<p>
-								Vortexes <br />
-								Chompers <br />
-								Wildfire <br />
-								Sunbeams<br />
-								Jackpots <br />
-								Branded
-							</p>
-						</div>
-					</div>
-				</div>
-			</div> -->
+		<main>
 			<section id="hero" class="hero">
 				<div id="hero-type" class="hero-type"></div>
-				<input id="hero-input" class="hero-input" type="search" />
 			</section>
-			<section class="font-info">
-				<!-- <div class="history-text">
-					<p>
-						Monaspace is a modern monospaced font superfamily developed by
-						GitHub Next, designed to improve the coding experience with a
-						balance of readability, aesthetics, and flexibility. Unlike
-						traditional monospaced fonts, which can often feel rigid or uneven
-						in texture, Monaspace introduces "Texture Healing," a technique that
-						smooths out text density to resemble proportional type while
-						maintaining the essential grid structure of monospace. The font
-						family consists of five distinct yet interchangeable typefaces—Neon,
-						Argon, Xenon, Radon, and Krypton—each bringing its own unique style
-						while remaining metrics-compatible. This allows developers to mix
-						and match fonts without disrupting layout or alignment, fostering a
-						more expressive and personalized coding environment.
-					</p>
-				</div> -->
-				<div class="superFamily">
-					<p>MONASPACE <span class="decrease">is a</span> SUPERFAMILY</p>
-					<p>5 FONTS <span class="decrease">in the</span> ONE FAMILY</p>
+			<section class="font-type">
+				<div class="card argon">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+					repellendus quam odit eum voluptatem ad laudantium, dolorem enim
+					perferendis aspernatur! Quidem ea dolore quo enim et praesentium nisi
+					ex delectus?
 				</div>
-				<div class="card-container">
-					<div class="font-card argon">
-						<p class="symbol">Ar</p>
-						<div class="title">
-							<p>Argon</p>
-							<p>Humanist Sans</p>
-						</div>
-						<div class="example-text">
-							<p>Vertex</p>
-							<p>Quirk</p>
-							<p>Zodiac</p>
-						</div>
-					</div>
-					<div class="font-card krypton">
-						<p class="symbol">Kr</p>
-						<div class="title">
-							<p>Krypton</p>
-							<p>Mechanical Sans</p>
-						</div>
-					</div>
-					<div class="font-card neon">
-						<p class="symbol">Ne</p>
-						<div class="title">
-							<p>Neon</p>
-							<p>Neo-grotesque Sans</p>
-						</div>
-					</div>
-					<div class="font-card radon">
-						<p class="symbol">Rn</p>
-						<div class="title">
-							<p>Radon</p>
-							<p>Handwriting</p>
-						</div>
-					</div>
-					<div class="font-card xenon">
-						<p class="symbol">Xe</p>
-						<div class="title">
-							<p>Xenon</p>
-							<p>Slab Serif</p>
-						</div>
-					</div>
+				<div class="card krypton">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+					repellendus quam odit eum voluptatem ad laudantium, dolorem enim
+					perferendis aspernatur! Quidem ea dolore quo enim et praesentium nisi
+					ex delectus?
 				</div>
-
-				<!-- <div class="history-text">
-					<p>
-						GitHub's choice to name the fonts after noble gases is more than
-						just a thematic decision—it reflects the shared characteristics
-						between these elements and Monaspace itself. Noble gases are
-						consistent yet diverse, each with distinct properties while adhering
-						to the same fundamental principles. Similarly, the Monaspace fonts
-						are unified in their design philosophy yet offer unique stylistic
-						variations suited for different preferences. By drawing inspiration
-						from science and typography, Monaspace redefines what a monospaced
-						font can be, offering developers a visually engaging and technically
-						refined alternative to traditional coding fonts.
-					</p>
-				</div> -->
+				<div class="card neon">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+					repellendus quam odit eum voluptatem ad laudantium, dolorem enim
+					perferendis aspernatur! Quidem ea dolore quo enim et praesentium nisi
+					ex delectus?
+				</div>
+				<div class="card radon">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+					repellendus quam odit eum voluptatem ad laudantium, dolorem enim
+					perferendis aspernatur! Quidem ea dolore quo enim et praesentium nisi
+					ex delectus?
+				</div>
+				<div class="card xenon">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+					repellendus quam odit eum voluptatem ad laudantium, dolorem enim
+					perferendis aspernatur! Quidem ea dolore quo enim et praesentium nisi
+					ex delectus?
+				</div>
 			</section>
-			<!-- <section>texture healing and ligature</section> -->
-			<section id="font-set" class="font-set"></section>
-			<section>Download Font Here</section>
-			<footer>I designed this whole thing. I am so good</footer>
 		</main>
 		<script src="script.js"></script>
 	</body>
