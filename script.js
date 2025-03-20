@@ -23,6 +23,19 @@ let fontStyles = [
 	"MonaspaceXenon",
 ];
 
+let select = {
+	1: argonChange,
+	2: kryptonChange,
+	3: xenonChange,
+	4: radonChange,
+	5: neonChange,
+};
+
+function fontStyle() {
+	let randomKey = Math.floor(Math.random() * 5) + 1; // Generate a random number between 1 and 5
+	select[randomKey](); // Call the corresponding function
+}
+
 function argonChange() {
 	document.body.style.fontFamily = fontStyles[0];
 	document.documentElement.style.setProperty("--primary", "#89deff");

@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="cardAnimation.css" />
+		<link rel="stylesheet" href="style.css" />
 		<title>MONASPACE</title>
 	</head>
 	<body class="container">
@@ -26,8 +26,8 @@
 				<ul>
 					<li><a href="#">History</a></li>
 					<li><a href="#">Variations</a></li>
-					<li class="dropdown-li" id="characterSet" onclick="openNav()">
-						<a>Font Family</a>
+					<li class="dropdown-li" id="characterSet" onclick="fontStyle()">
+						<a>Change</a>
 					</li>
 				</ul>
 			</nav>
@@ -36,36 +36,40 @@
 			<section id="hero" class="hero">
 				<div id="hero-type" class="hero-type"></div>
 			</section>
+			<section>
+				<p>MONASPACE is a SUPERFAMILY</p>
+				<p>FIVE FONTS in the ONE FAMILY</p>
+			</section>
 			<section class="font-type">
-				<div class="card argon">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
-					repellendus quam odit eum voluptatem ad laudantium, dolorem enim
-					perferendis aspernatur! Quidem ea dolore quo enim et praesentium nisi
-					ex delectus?
+				<div class="card argon" onclick="argonChange()">
+					<p>Ar</p>
+					<p>Argon</p>
+					<p>Humanist Sans</p>
+					<p>Example words <br /></p>
 				</div>
-				<div class="card krypton">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
-					repellendus quam odit eum voluptatem ad laudantium, dolorem enim
-					perferendis aspernatur! Quidem ea dolore quo enim et praesentium nisi
-					ex delectus?
+				<div class="card krypton" onclick="kryptonChange()">
+					<p>Kr</p>
+					<p>Krypton</p>
+					<p>Mechanical Sans</p>
+					<p>Example words <br /></p>
 				</div>
-				<div class="card neon">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
-					repellendus quam odit eum voluptatem ad laudantium, dolorem enim
-					perferendis aspernatur! Quidem ea dolore quo enim et praesentium nisi
-					ex delectus?
+				<div class="card neon" onclick="neonChange()">
+					<p>Ne</p>
+					<p>Neon</p>
+					<p>Neo-grotesque Sans</p>
+					<p>Example words <br /></p>
 				</div>
-				<div class="card radon">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
-					repellendus quam odit eum voluptatem ad laudantium, dolorem enim
-					perferendis aspernatur! Quidem ea dolore quo enim et praesentium nisi
-					ex delectus?
+				<div class="card radon" onclick="radonChange()">
+					<p>Rn</p>
+					<p>Radon</p>
+					<p>Handwriting</p>
+					<p>Example words <br /></p>
 				</div>
-				<div class="card xenon">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
-					repellendus quam odit eum voluptatem ad laudantium, dolorem enim
-					perferendis aspernatur! Quidem ea dolore quo enim et praesentium nisi
-					ex delectus?
+				<div class="card xenon" onclick="xenonChange()">
+					<p>Xe</p>
+					<p>Xenon</p>
+					<p>Slab Serif</p>
+					<p>Example words <br /></p>
 				</div>
 			</section>
 		</main>

@@ -123,6 +123,10 @@ nav li:hover a {
 
 a {
 	transition: font-size 0.5s ease, font-weight 0.5s ease;
+	text-decoration: none;
+}
+a:visited {
+	color: white;
 }
 
 .L1 {
