@@ -11,11 +11,11 @@
 			<h1 class="page-title" onclick="closeNav()">
 				<div>
 					<a href="#hero">
-						<span class="L1">M</span><span class="L2">O</span
-						><span class="L3">N</span><span class="L4">A</span
-						><span class="L5">S</span><span class="L1">P</span
-						><span class="L2">A</span><span class="L3">C</span
-						><span class="L4">E</span>
+						<span class="heading L1">M</span><span class="heading L2">O</span
+						><span class="heading L3">N</span><span class="heading L4">A</span
+						><span class="heading L5">S</span><span class="heading L1">P</span
+						><span class="heading L2">A</span><span class="heading L3">C</span
+						><span class="heading L4">E</span>
 					</a>
 				</div>
 				<span
@@ -45,7 +45,7 @@
 					<span class="bigLetters">SUPERFAMILY</span>
 				</p>
 			</section>
-			<section class="font-type">
+			<section class="font-type scroll-fade">
 				<div class="card argon" onclick="argonChange()">
 					<p class="symbol">Ar</p>
 					<p class="name">Argon</p>
@@ -97,20 +97,20 @@
 					</p>
 				</div>
 			</section>
-			<section class="superfamily">
+			<section class="superfamily scroll-fade">
 				<p>
 					<span class="bigLetters">FIVE FONTS</span> <br />in the <br />
 					<span class="bigLetters">ONE FAMILY</span>
 				</p>
 			</section>
-			<section class="history">
+			<section class="history scroll-fade">
 				Monaspace is a typeface superfamily created by GitHub, designed to
 				provide a cohesive and versatile set of fonts for developers and
 				designers. It emphasizes readability, modern aesthetics, and
 				adaptability across various use cases.
 			</section>
-			<section class="type-set">
-				<div class="letter-set">
+			<section class="type-set scroll-fade">
+				<div class="letter-set scroll-fade">
 					<span class="letter">A</span>
 					<span class="letter">B</span>
 					<span class="letter">C</span>
@@ -182,44 +182,58 @@
 					<span class="special-char">?</span>
 					<span class="special-char">/</span>
 				</div>
-				<div class="slider-container">
+				<!-- <div class="card slider-container scroll-fade"> -->
+				<div class="card slider-container" onclick="argonChange()">
 					<p>Move the sliders to change their axis</p>
 					<div>
-						<p>Axis 1 <span id="axis1"></span></p>
+						<p>Font Size: <span id="axis1"></span></p>
 						<input
 							id="axis1-slider"
 							class="slider"
 							type="range"
-							min="1"
-							max="100"
-							value="50"
+							min="10"
+							max="50"
+							value="38"
 						/>
 					</div>
 					<div>
-						<p>Axis 2 <span id="axis2"></span></p>
+						<p>Weight: <span id="axis2"></span></p>
 						<input
 							id="axis2-slider"
 							class="slider"
 							type="range"
-							min="1"
-							max="100"
-							value="50"
+							min="100"
+							max="900"
+							value="400"
 						/>
 					</div>
 					<div>
-						<p>Axis 3 <span id="axis3"></span></p>
+						<p>Width: <span id="axis3"></span></p>
 						<input
 							id="axis3-slider"
 							class="slider"
 							type="range"
-							min="1"
-							max="100"
+							min="100"
+							max="125"
+							value="50"
+						/>
+					</div>
+					<div>
+						<p>Slant: <span id="axis4"></span></p>
+						<input
+							id="axis4-slider"
+							class="slider"
+							type="range"
+							min="-11"
+							max="0"
 							value="50"
 						/>
 					</div>
 				</div>
+				<!-- 
+				</div> -->
 			</section>
-			<footer>
+			<footer class="scroll-fade">
 				<p>
 					Website designed and created by Joshua Karbowiak <br />
 					Font created as a Github Project.

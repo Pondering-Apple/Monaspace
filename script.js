@@ -28,12 +28,15 @@ let select = {
 var slider1 = document.getElementById("axis1-slider");
 var slider2 = document.getElementById("axis2-slider");
 var slider3 = document.getElementById("axis3-slider");
+var slider4 = document.getElementById("axis4-slider");
 var output1 = document.getElementById("axis1");
 var output2 = document.getElementById("axis2");
 var output3 = document.getElementById("axis3");
+var output4 = document.getElementById("axis4");
 output1.innerHTML = slider1.value;
 output2.innerHTML = slider2.value;
 output3.innerHTML = slider3.value;
+output4.innerHTML = slider4.value;
 
 function fontStyle() {
 	let randomKey = Math.floor(Math.random() * 5) + 1; // Generate a random number between 1 and 5
@@ -109,3 +112,18 @@ slider2.oninput = function () {
 slider3.oninput = function () {
 	output3.innerHTML = this.value;
 };
+slider4.oninput = function () {
+	output4.innerHTML = this.value;
+};
+
+const elements = document.querySelectorAll(".scroll-fade");
+
+const observer = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			entry.target.classList.add("visible");
+		}
+	});
+});
+
+elements.forEach((el) => observer.observe(el));
