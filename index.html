@@ -38,9 +38,12 @@
 			<section id="hero" class="hero">
 				<div id="hero-type" class="hero-type"></div>
 			</section>
-			<section>
-				<p>MONASPACE is a SUPERFAMILY</p>
-				<p>FIVE FONTS in the ONE FAMILY</p>
+			<section class="superfamily">
+				<p>
+					<span class="bigLetters">MONASPACE </span>
+					<br />is a <br />
+					<span class="bigLetters">SUPERFAMILY</span>
+				</p>
 			</section>
 			<section class="font-type">
 				<div class="card argon" onclick="argonChange()">
@@ -94,6 +97,18 @@
 					</p>
 				</div>
 			</section>
+			<section class="superfamily">
+				<p>
+					<span class="bigLetters">FIVE FONTS</span> <br />in the <br />
+					<span class="bigLetters">ONE FAMILY</span>
+				</p>
+			</section>
+			<section class="history">
+				Monaspace is a typeface superfamily created by GitHub, designed to
+				provide a cohesive and versatile set of fonts for developers and
+				designers. It emphasizes readability, modern aesthetics, and
+				adaptability across various use cases.
+			</section>
 			<section class="type-set">
 				<div class="letter-set">
 					<span class="letter">A</span>
@@ -112,6 +127,7 @@
 					<span class="letter">N</span>
 					<span class="letter">O</span>
 					<span class="letter">P</span>
+					<br />
 					<span class="letter">Q</span>
 					<span class="letter">R</span>
 					<span class="letter">S</span>
@@ -139,6 +155,7 @@
 					<span class="special-char">$</span>
 					<span class="special-char">%</span>
 					<span class="special-char">^</span>
+					<br />
 					<span class="special-char">&</span>
 					<span class="special-char">*</span>
 					<span class="special-char">(</span>
@@ -165,7 +182,42 @@
 					<span class="special-char">?</span>
 					<span class="special-char">/</span>
 				</div>
-				<div class="axis-slider">this will be a slider for the axies</div>
+				<div class="slider-container">
+					<p>Move the sliders to change their axis</p>
+					<div>
+						<p>Axis 1 <span id="axis1"></span></p>
+						<input
+							id="axis1-slider"
+							class="slider"
+							type="range"
+							min="1"
+							max="100"
+							value="50"
+						/>
+					</div>
+					<div>
+						<p>Axis 2 <span id="axis2"></span></p>
+						<input
+							id="axis2-slider"
+							class="slider"
+							type="range"
+							min="1"
+							max="100"
+							value="50"
+						/>
+					</div>
+					<div>
+						<p>Axis 3 <span id="axis3"></span></p>
+						<input
+							id="axis3-slider"
+							class="slider"
+							type="range"
+							min="1"
+							max="100"
+							value="50"
+						/>
+					</div>
+				</div>
 			</section>
 			<footer>
 				<p>

@@ -18,7 +18,6 @@ let fontStyles = [
 	"MonaspaceRadon",
 	"MonaspaceXenon",
 ];
-
 let select = {
 	1: argonChange,
 	2: kryptonChange,
@@ -26,6 +25,15 @@ let select = {
 	4: radonChange,
 	5: neonChange,
 };
+var slider1 = document.getElementById("axis1-slider");
+var slider2 = document.getElementById("axis2-slider");
+var slider3 = document.getElementById("axis3-slider");
+var output1 = document.getElementById("axis1");
+var output2 = document.getElementById("axis2");
+var output3 = document.getElementById("axis3");
+output1.innerHTML = slider1.value;
+output2.innerHTML = slider2.value;
+output3.innerHTML = slider3.value;
 
 function fontStyle() {
 	let randomKey = Math.floor(Math.random() * 5) + 1; // Generate a random number between 1 and 5
@@ -91,3 +99,13 @@ function customType() {
 		hero.innerHTML = input; // Update the hero-type element with the input value
 	}
 }
+
+slider1.oninput = function () {
+	output1.innerHTML = this.value;
+};
+slider2.oninput = function () {
+	output2.innerHTML = this.value;
+};
+slider3.oninput = function () {
+	output3.innerHTML = this.value;
+};
