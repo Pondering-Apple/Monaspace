@@ -22,6 +22,7 @@
 :root {
 	--background: #1a1a1a;
 	--background-secondary: #1f1f1f;
+	--background-tertiary: #242424;
 	--primary: #89deff;
 	--secondary: #c4ebff;
 	--accent: #314246;
@@ -128,55 +129,11 @@ a {
 	color: white;
 }
 a:visited {
-	color: white;
+	color: var(--primary);
 }
-
-/* .L1 {
-	font-family: "MonaspaceArgon";
-}
-.L2 {
-	font-family: "MonaspaceKrypton";
-}
-.L3 {
-	font-family: "MonaspaceNeon";
-}
-.L4 {
-	font-family: "MonaspaceRadon";
-}
-.L5 {
-	font-family: "MonaspaceXenon";
-} */
 
 .heading {
-	animation: change 10s infinite;
-}
-
-@keyframes change {
-	0% {
-		color: var(--argon-primary);
-		text-shadow: 0px 3px 10px var(--argon-primary);
-		font-family: "MonaspaceArgon";
-	}
-	25% {
-		color: var(--krypton-primary);
-		text-shadow: 0px 3px 10px var(--krypton-primary);
-		font-family: "MonaspaceKrypton";
-	}
-	50% {
-		color: var(--neon-primary);
-		text-shadow: 0px 3px 10px var(--neon-primary);
-		font-family: "MonaspaceNeon";
-	}
-	75% {
-		color: var(--radon-primary);
-		text-shadow: 0px 3px 10px var(--radon-primary);
-		font-family: "MonaspaceRadon";
-	}
-	100% {
-		color: var(--xenon-primary);
-		text-shadow: 0px 3px 10px var(--xenon-primary);
-		font-family: "MonaspaceXenon";
-	}
+	color: var(--primary);
 }
 
 .scroll-fade {
@@ -217,10 +174,10 @@ a:visited {
 	bottom: 10px; /* Adjust as needed to place it near the bottom */
 }
 
-.hero-input:focus {
-	border-color: rgb(74, 255, 80); /* Change the border color to blue on focus */
-	outline: none; /* Remove the default outline */
-}
+/* .hero-input:focus {
+	border-color: rgb(74, 255, 80); 
+	outline: none;
+} */
 
 @keyframes blinking {
 	from {
@@ -338,8 +295,11 @@ body.container {
 .argon::before {
 	background-image: conic-gradient(
 		from var(--angle),
-		transparent,
 		var(--argon-primary),
+		var(--argon-accent),
+		var(--argon-secondary),
+		var(--argon-primary),
+		var(--argon-accent),
 		var(--argon-secondary),
 		var(--argon-primary)
 	);
@@ -349,8 +309,11 @@ body.container {
 .krypton::before {
 	background-image: conic-gradient(
 		from var(--angle),
-		transparent,
 		var(--krypton-primary),
+		var(--krypton-accent),
+		var(--krypton-secondary),
+		var(--krypton-primary),
+		var(--krypton-accent),
 		var(--krypton-secondary),
 		var(--krypton-primary)
 	);
@@ -359,8 +322,11 @@ body.container {
 .neon::before {
 	background-image: conic-gradient(
 		from var(--angle),
-		transparent,
 		var(--neon-primary),
+		var(--neon-accent),
+		var(--neon-secondary),
+		var(--neon-primary),
+		var(--neon-accent),
 		var(--neon-secondary),
 		var(--neon-primary)
 	);
@@ -369,8 +335,11 @@ body.container {
 .radon::before {
 	background-image: conic-gradient(
 		from var(--angle),
-		transparent,
 		var(--radon-primary),
+		var(--radon-accent),
+		var(--radon-secondary),
+		var(--radon-primary),
+		var(--radon-accent),
 		var(--radon-secondary),
 		var(--radon-primary)
 	);
@@ -379,8 +348,11 @@ body.container {
 .xenon::before {
 	background-image: conic-gradient(
 		from var(--angle),
-		transparent,
 		var(--xenon-primary),
+		var(--xenon-accent),
+		var(--xenon-secondary),
+		var(--xenon-primary),
+		var(--xenon-accent),
 		var(--xenon-secondary),
 		var(--xenon-primary)
 	);
@@ -392,8 +364,8 @@ body.container {
 
 .card:hover::before,
 .card:hover::after {
-	opacity: 1; /* Make the pseudo-elements visible on hover */
-	animation: spin 10s linear infinite; /* Trigger the animation */
+	opacity: 1;
+	animation: spin 10s linear infinite; /
 }
 
 @keyframes spin {
@@ -432,11 +404,12 @@ body.container {
 	justify-content: space-between;
 }
 
-.letter,
-.number,
-.special-char {
-	line-height: 4.5rem;
-	font-size: 38px;
+.letter-set {
+	width: 40%;
+	font-family: "MonaspaceArgon"; /* Use a variable font */
+	font-variation-settings: "wght" 400, "wdth" 100, "slnt" 0; /* Default values */
+	font-size: 38px; /* Default font size */
+	transition: all 0.3s ease; /* Smooth transitions */
 }
 
 .slider-container {
@@ -452,21 +425,26 @@ body.container {
 	border-radius: 4%;
 	background-image: conic-gradient(
 		from var(--angle),
-		transparent,
 		var(--primary),
 		var(--secondary),
+		var(--accent),
 		var(--primary)
 	);
 }
 
 .slider-container:hover::before,
 .slider:hover::after {
-	opacity: 1; /* Make the pseudo-elements visible on hover */
-	animation: spin 20s linear infinite; /* Trigger the animation */
+	opacity: 1;
+	animation: spin 10s linear infinite; 
 }
 
 .slider-container > div {
 	margin-top: 3rem;
+}
+
+.slider-container > p {
+	font-size: 1.5rem;
+	padding-top: 1rem;
 }
 
 .slider {
@@ -477,6 +455,26 @@ body.container {
 	border-radius: 5px;
 	outline: none;
 	transition: var(--background) 0.3s ease;
+}
+
+.custom-text {
+	margin: 1rem 0 2rem 0;
+	appearance: none;
+	width: 100%;
+	height: 1rem;
+	border-radius: 5px;
+	padding: 3px 5px;
+	background-color: var(--background-tertiary);
+	color: white;
+	transition: all 0.3s;
+}
+
+.custom-text:hover {
+	outline: 3px solid var(--accent);
+}
+
+.custom-text:focus {
+	outline: 3px solid var(--primary);
 }
 
 .slider::-webkit-slider-thumb {
@@ -499,17 +497,104 @@ body.container {
 }
 
 .slider::-moz-range-progress {
-	background: var(--primary); /* Color of the progressed portion */
-	height: 8px; /* Match the height of the slider */
-	border-radius: 5px; /* Rounded corners */
+	background: var(--primary);
+	height: 8px;
+	border-radius: 5px; 
 }
 
-/* Style the remaining portion of the slider track (Firefox only) */
 .slider::-moz-range-track {
-	background: var(--accent); /* Color of the remaining portion */
+	background: var(--accent);
 	height: 8px;
 	border-radius: 10px;
 	border: 1px solid var(--accent);
+}
+
+/* General slider styles */
+.slider {
+  appearance: none;
+  -webkit-appearance: none; /* For WebKit browsers */
+  width: 100%;
+  height: 8px;
+  background: var(--accent); /* Track background */
+  border-radius: 10px; /* Rounded track */
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+/* WebKit (Chrome, Safari, Edge) - Track */
+.slider::-webkit-slider-runnable-track {
+  background: var(--accent); /* Track background */
+  height: 8px;
+  border-radius: 10px;
+  border: 1px solid var(--accent); /* Track border */
+}
+
+/* WebKit (Chrome, Safari, Edge) - Thumb */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Remove default styling */
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: lightslategray; /* Thumb background */
+  border-radius: 50%; /* Circular thumb */
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Firefox - Progress */
+.slider::-moz-range-progress {
+  background: var(--primary); /* Progress background */
+  height: 8px;
+  border-radius: 5px;
+}
+
+/* Firefox - Track */
+.slider::-moz-range-track {
+  background: var(--accent); /* Track background */
+  height: 8px;
+  border-radius: 10px;
+  border: 1px solid var(--accent); /* Track border */
+}
+
+/* Firefox - Thumb */
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: lightslategray; /* Thumb background */
+  border-radius: 50%; /* Circular thumb */
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Internet Explorer - Track */
+.slider::-ms-track {
+  background: transparent; /* Remove default track styling */
+  border-color: transparent;
+  color: transparent;
+  height: 8px;
+}
+
+/* Internet Explorer - Progress (Lower Fill) */
+.slider::-ms-fill-lower {
+  background: var(--primary); /* Progress background */
+  border-radius: 5px;
+}
+
+/* Internet Explorer - Remaining Track (Upper Fill) */
+.slider::-ms-fill-upper {
+  background: var(--accent); /* Track background */
+  border-radius: 10px;
+  border: 1px solid var(--accent); /* Track border */
+}
+
+/* Internet Explorer - Thumb */
+.slider::-ms-thumb {
+  width: 20px;
+  height: 20px;
+  background: lightslategray; /* Thumb background */
+  border-radius: 50%; /* Circular thumb */
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 footer {

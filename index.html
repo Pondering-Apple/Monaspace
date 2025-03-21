@@ -10,16 +10,15 @@
 		<header>
 			<h1 class="page-title" onclick="closeNav()">
 				<div>
-					<a href="#hero">
-						<span class="heading L1">M</span><span class="heading L2">O</span
-						><span class="heading L3">N</span><span class="heading L4">A</span
-						><span class="heading L5">S</span><span class="heading L1">P</span
-						><span class="heading L2">A</span><span class="heading L3">C</span
-						><span class="heading L4">E</span>
+					<a class="heading" href="#hero">
+						MONASPACE
 					</a>
 				</div>
 				<span
-					><a href="https://monaspace.githubnext.com/" target="_blank"
+					><a
+						class="github"
+						href="https://monaspace.githubnext.com/"
+						target="_blank"
 						>by Github</a
 					></span
 				>
@@ -28,10 +27,6 @@
 				<ul>
 					<li><a href="#">History</a></li>
 					<li><a href="#">Variations</a></li>
-					<li class="dropdown-li" id="characterSet" onclick="fontStyle()">
-						<a>Change</a>
-					</li>
-				</ul>
 			</nav>
 		</header>
 		<main>
@@ -127,7 +122,6 @@
 					<span class="letter">N</span>
 					<span class="letter">O</span>
 					<span class="letter">P</span>
-					<br />
 					<span class="letter">Q</span>
 					<span class="letter">R</span>
 					<span class="letter">S</span>
@@ -138,7 +132,6 @@
 					<span class="letter">X</span>
 					<span class="letter">Y</span>
 					<span class="letter">Z</span>
-					<br />
 					<span class="number">0</span>
 					<span class="number">1</span>
 					<span class="number">2</span>
@@ -155,7 +148,6 @@
 					<span class="special-char">$</span>
 					<span class="special-char">%</span>
 					<span class="special-char">^</span>
-					<br />
 					<span class="special-char">&</span>
 					<span class="special-char">*</span>
 					<span class="special-char">(</span>
@@ -164,7 +156,6 @@
 					<span class="special-char">+</span>
 					<span class="special-char">-</span>
 					<span class="special-char">=</span>
-					<br />
 					<span class="special-char">{</span>
 					<span class="special-char">}</span>
 					<span class="special-char">[</span>
@@ -183,7 +174,7 @@
 					<span class="special-char">/</span>
 				</div>
 				<!-- <div class="card slider-container scroll-fade"> -->
-				<div class="card slider-container" onclick="argonChange()">
+				<div class="card slider-container">
 					<p>Move the sliders to change their axis</p>
 					<div>
 						<p>Font Size: <span id="axis1"></span></p>
@@ -215,7 +206,7 @@
 							type="range"
 							min="100"
 							max="125"
-							value="50"
+							value="100"
 						/>
 					</div>
 					<div>
@@ -226,8 +217,12 @@
 							type="range"
 							min="-11"
 							max="0"
-							value="50"
+							value="0"
 						/>
+					</div>
+					<div>
+						<label for="custom-text"> Create your own</label>
+						<input id="custom-text" type="text" class="custom-text"/>
 					</div>
 				</div>
 				<!-- 

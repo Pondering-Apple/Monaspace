@@ -82,27 +82,6 @@ function typing() {
 	}
 }
 
-function deleting() {
-	if (i > txt.length) {
-		set;
-		document.getElementById("hero-type").innerHTML += txt.charAt(i);
-		i--;
-		setTimeout(deleting, speed);
-	}
-}
-
-function customType() {
-	let input = document.getElementById("hero-input").value; // Use .value to get the input value
-	let hero = document.getElementById("hero-type");
-	if (input.length == 0) {
-		hero.innerHTML = ""; // Clear the hero-type element
-		i = 0; // Reset the typing index
-		setTimeout(typing, typeDelay);
-	} else {
-		hero.innerHTML = input; // Update the hero-type element with the input value
-	}
-}
-
 slider1.oninput = function () {
 	output1.innerHTML = this.value;
 };
@@ -127,3 +106,30 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 elements.forEach((el) => observer.observe(el));
+
+// Get the sliders and the target element
+const fontSizeSlider = document.getElementById("axis1-slider");
+const fontWeightSlider = document.getElementById("axis2-slider");
+const fontWidthSlider = document.getElementById("axis3-slider");
+const fontSlantSlider = document.getElementById("axis4-slider");
+const letterSet = document.querySelector(".letter-set");
+
+// Function to update the font properties
+function updateFontProperties() {
+	// Update font size
+	letterSet.style.fontSize = `${fontSizeSlider.value}px`;
+
+	// Update font variation settings
+	letterSet.style.fontVariationSettings = `"wght" ${fontWeightSlider.value}, "wdth" ${fontWidthSlider.value}, "slnt" ${fontSlantSlider.value}`;
+}
+
+// Initialize the font properties on page load
+document.addEventListener("DOMContentLoaded", () => {
+	updateFontProperties(); // Apply the current slider values to the font
+
+	// Add event listeners to update the font properties when sliders change
+	fontSizeSlider.addEventListener("input", updateFontProperties);
+	fontWeightSlider.addEventListener("input", updateFontProperties);
+	fontWidthSlider.addEventListener("input", updateFontProperties);
+	fontSlantSlider.addEventListener("input", updateFontProperties);
+});
