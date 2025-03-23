@@ -10,9 +10,7 @@
 		<header>
 			<h1 class="page-title" onclick="closeNav()">
 				<div>
-					<a class="heading" href="#hero">
-						MONASPACE
-					</a>
+					<a class="heading" href="#hero"> MONASPACE </a>
 				</div>
 				<span
 					><a
@@ -25,8 +23,9 @@
 			</h1>
 			<nav class="page-nav">
 				<ul>
-					<li><a href="#">History</a></li>
-					<li><a href="#">Variations</a></li>
+					<li><a href="#history">History</a></li>
+					<li><a href="#variations">Variations</a></li>
+				</ul>
 			</nav>
 		</header>
 		<main>
@@ -40,56 +39,64 @@
 					<span class="bigLetters">SUPERFAMILY</span>
 				</p>
 			</section>
-			<section class="font-type scroll-fade">
-				<div class="card argon" onclick="argonChange()">
-					<p class="symbol">Ar</p>
-					<p class="name">Argon</p>
-					<p class="type">Humanist Sans</p>
-					<p class="word-list">
-						Vertex<br />
-						Quirk<br />
-						Zodiac
-					</p>
-				</div>
-				<div class="card krypton" onclick="kryptonChange()">
-					<p class="symbol">Kr</p>
-					<p class="name">Krypton</p>
-					<p class="type">Mechanical Sans</p>
-					<p class="word-list">
-						Nimbus<br />
-						Glitch<br />
-						Jovial
-					</p>
-				</div>
-				<div class="card neon" onclick="neonChange()">
-					<p class="symbol">Ne</p>
-					<p class="name">Neon</p>
-					<p class="type">Neo-grotesque Sans</p>
-					<p class="word-list">
-						Phantom<br />
-						Breeze<br />
-						Vortex
-					</p>
-				</div>
-				<div class="card radon" onclick="radonChange()">
-					<p class="symbol">Rn</p>
-					<p class="name">Radon</p>
-					<p class="type">Handwriting</p>
-					<p class="word-list">
-						Mosaic<br />
-						Flicker<br />
-						Echoes
-					</p>
-				</div>
-				<div class="card xenon" onclick="xenonChange()">
-					<p class="symbol">Xe</p>
-					<p class="name">Xenon</p>
-					<p class="type">Slab Serif</p>
-					<p class="word-list">
-						Zephyr<br />
-						Havoc<br />
-						Mystic
-					</p>
+			<section class="font-type-wrapper">
+				<div class="font-type scroll-fade">
+					<div>
+						<p><br /></p>
+					</div>
+					<div class="card argon" onclick="argonChange()">
+						<p class="symbol">Ar</p>
+						<p class="name">Argon</p>
+						<p class="type">Humanist Sans</p>
+						<p class="word-list">
+							Vertex<br />
+							Quirk<br />
+							Zodiac
+						</p>
+					</div>
+					<div class="card krypton" onclick="kryptonChange()">
+						<p class="symbol">Kr</p>
+						<p class="name">Krypton</p>
+						<p class="type">Mechanical Sans</p>
+						<p class="word-list">
+							Nimbus<br />
+							Glitch<br />
+							Jovial
+						</p>
+					</div>
+					<div class="card neon" onclick="neonChange()">
+						<p class="symbol">Ne</p>
+						<p class="name">Neon</p>
+						<p class="type">Neo-grotesque Sans</p>
+						<p class="word-list">
+							Phantom<br />
+							Breeze<br />
+							Vortex
+						</p>
+					</div>
+					<div class="card radon" onclick="radonChange()">
+						<p class="symbol">Rn</p>
+						<p class="name">Radon</p>
+						<p class="type">Handwriting</p>
+						<p class="word-list">
+							Mosaic<br />
+							Flicker<br />
+							Echoes
+						</p>
+					</div>
+					<div class="card xenon" onclick="xenonChange()">
+						<p class="symbol">Xe</p>
+						<p class="name">Xenon</p>
+						<p class="type">Slab Serif</p>
+						<p class="word-list">
+							Zephyr<br />
+							Havoc<br />
+							Mystic
+						</p>
+					</div>
+					<div>
+						<p><br /></p>
+					</div>
 				</div>
 			</section>
 			<section class="superfamily scroll-fade">
@@ -98,13 +105,35 @@
 					<span class="bigLetters">ONE FAMILY</span>
 				</p>
 			</section>
-			<section class="history scroll-fade">
-				Monaspace is a typeface superfamily created by GitHub, designed to
-				provide a cohesive and versatile set of fonts for developers and
-				designers. It emphasizes readability, modern aesthetics, and
-				adaptability across various use cases.
+			<section id="history" class="history scroll-fade">
+				<p>
+					Monaspace is a modern monospaced font superfamily developed by GitHub
+					Next, designed to improve the coding experience with a balance of
+					readability, aesthetics, and flexibility. Unlike traditional
+					monospaced fonts, which can often feel rigid or uneven in texture,
+					Monaspace introduces “Texture Healing,” a technique that smooths out
+					text density to resemble proportional type while maintaining the
+					essential grid structure of monospace. The font family consists of
+					five distinct yet interchangeable typefaces—Neon, Argon, Xenon, Radon,
+					and Krypton—each bringing its own unique style while remaining
+					metrics-compatible. This allows developers to mix and match fonts
+					without disrupting layout or alignment, fostering a more expressive
+					and personalized coding environment.
+				</p>
+				<p>
+					GitHub’s choice to name the fonts after noble gases is more than just
+					a thematic decision—it reflects the shared characteristics between
+					these elements and Monaspace itself. Noble gases are consistent yet
+					diverse, each with distinct properties while adhering to the same
+					fundamental principles. Similarly, the Monaspace fonts are unified in
+					their design philosophy yet offer unique stylistic variations suited
+					for different preferences. By drawing inspiration from science and
+					typography, Monaspace redefines what a monospaced font can be,
+					offering developers a visually engaging and technically refined
+					alternative to traditional coding fonts.
+				</p>
 			</section>
-			<section class="type-set scroll-fade">
+			<section id="variations" class="type-set scroll-fade">
 				<div class="letter-set scroll-fade">
 					<span class="letter">A</span>
 					<span class="letter">B</span>
@@ -222,7 +251,7 @@
 					</div>
 					<div>
 						<label for="custom-text"> Create your own</label>
-						<input id="custom-text" type="text" class="custom-text"/>
+						<input id="custom-text" type="text" class="custom-text" />
 					</div>
 				</div>
 				<!-- 

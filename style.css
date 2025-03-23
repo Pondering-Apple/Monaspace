@@ -66,22 +66,23 @@ body {
 header {
 	background: var(--background);
 	text-align: left;
-	top: 0px;
+	top: 0;
 	position: fixed;
 	z-index: 999;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	border-bottom: 3px solid black;
+	border-bottom: 0.1875rem solid black;
 }
 
 header h1 {
 	color: white;
-	font-size: 2em;
-	padding: 0.3em 1em;
+	font-size: 2rem;
+	padding: 0.1875rem 0.625rem;
 	transition: color 1s ease;
 	cursor: default;
+	padding-left: 1rem;
 }
 header h1 > div {
 	display: inline;
@@ -104,22 +105,22 @@ nav {
 
 nav ul {
 	margin: 0;
-	padding: 0 1em;
+	padding: 0 0.625rem;
 	list-style: none;
 	display: flex;
-	gap: 1em;
+	gap: 1rem;
 }
 
 nav li {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 1em 1em;
+	padding: 1rem;
 	cursor: pointer;
 }
 
 nav li:hover a {
-	font-size: 1.2em;
+	font-size: 1.2rem;
 	font-weight: 700;
 }
 
@@ -138,7 +139,7 @@ a:visited {
 
 .scroll-fade {
 	opacity: 0;
-	transform: translateY(100px);
+	transform: translateY(6.25rem);
 	transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
@@ -150,13 +151,13 @@ a:visited {
 .hero {
 	height: 50%;
 	display: flex;
-	flex-direction: column; /* Stack children vertically */
+	flex-direction: column;
 	background: var(--background);
 	background-size: cover;
-	justify-content: center; /* Center children vertically */
-	align-items: center; /* Center children horizontally */
+	justify-content: center;
+	align-items: center;
 	font-family: "MonaspaceArgon";
-	position: relative; /* Position relative to place hero-type at the bottom */
+	position: relative;
 }
 
 .hero-type {
@@ -166,18 +167,13 @@ a:visited {
 }
 
 .hero-input {
-	padding: 5px;
+	padding: 0.3125rem;
 	width: 30%;
-	height: 2em;
+	height: 2rem;
 	display: block;
-	position: absolute; /* Position absolute to place it at the bottom */
-	bottom: 10px; /* Adjust as needed to place it near the bottom */
+	position: absolute;
+	bottom: 0.625rem;
 }
-
-/* .hero-input:focus {
-	border-color: rgb(74, 255, 80); 
-	outline: none;
-} */
 
 @keyframes blinking {
 	from {
@@ -199,13 +195,42 @@ a:visited {
 	font-weight: 500;
 }
 
+.font-type-wrapper {
+	overflow-x: auto;
+	white-space: nowrap;
+	/* padding: 0 0 1rem 3rem; */
+}
+
+/* .font-type {
+	display: flex;
+	padding: 0 1rem;
+} */
+
+.card {
+	flex: 0 0 auto;
+}
+
+.card:first-child {
+	margin-left: 1rem; /* Pushes the first card to the right */
+}
+
+.card:last-child {
+	margin-right: 1rem;
+}
+
 .font-type {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	width: 100vw;
 	height: auto;
-	padding: 5rem 0 5rem 0;
+	gap: 5rem;
+	padding: 5rem 0;
+}
+
+.spacer {
+	width: 2rem; /* Adjust for more or less space */
+	height: 100%;
 }
 
 .argon {
@@ -240,14 +265,9 @@ a:visited {
 }
 
 body.container {
-	/* display: flex;
-	justify-content: center;
-	align-items: center; */
 	height: 100vh;
 	margin: 0;
-	background-color: var(
-		--background
-	); /* Optional: Light background for contrast */
+	background-color: var(--background);
 }
 
 .card {
@@ -286,10 +306,6 @@ body.container {
 	filter: blur(2rem);
 	opacity: 0.9;
 }
-
-/* .argon {
-	border: 1px solid var(--argon-secondary);
-} */
 
 .argon::after,
 .argon::before {
@@ -365,7 +381,7 @@ body.container {
 .card:hover::before,
 .card:hover::after {
 	opacity: 1;
-	animation: spin 10s linear infinite; /
+	animation: spin 10s linear infinite;
 }
 
 @keyframes spin {
@@ -406,10 +422,10 @@ body.container {
 
 .letter-set {
 	width: 40%;
-	font-family: "MonaspaceArgon"; /* Use a variable font */
-	font-variation-settings: "wght" 400, "wdth" 100, "slnt" 0; /* Default values */
-	font-size: 38px; /* Default font size */
-	transition: all 0.3s ease; /* Smooth transitions */
+	font-family: "MonaspaceArgon";
+	font-variation-settings: "wght" 400, "wdth" 100, "slnt" 0;
+	font-size: 38px;
+	transition: all 0.3s ease;
 }
 
 .slider-container {
@@ -435,7 +451,7 @@ body.container {
 .slider-container:hover::before,
 .slider:hover::after {
 	opacity: 1;
-	animation: spin 10s linear infinite; 
+	animation: spin 10s linear infinite;
 }
 
 .slider-container > div {
@@ -499,7 +515,7 @@ body.container {
 .slider::-moz-range-progress {
 	background: var(--primary);
 	height: 8px;
-	border-radius: 5px; 
+	border-radius: 5px;
 }
 
 .slider::-moz-range-track {
@@ -509,92 +525,82 @@ body.container {
 	border: 1px solid var(--accent);
 }
 
-/* General slider styles */
 .slider {
-  appearance: none;
-  -webkit-appearance: none; /* For WebKit browsers */
-  width: 100%;
-  height: 8px;
-  background: var(--accent); /* Track background */
-  border-radius: 10px; /* Rounded track */
-  outline: none;
-  transition: background 0.3s ease;
+	appearance: none;
+	-webkit-appearance: none;
+	width: 100%;
+	height: 8px;
+	background: var(--accent);
+	border-radius: 10px;
+	outline: none;
+	transition: background 0.3s ease;
 }
 
-/* WebKit (Chrome, Safari, Edge) - Track */
 .slider::-webkit-slider-runnable-track {
-  background: var(--accent); /* Track background */
-  height: 8px;
-  border-radius: 10px;
-  border: 1px solid var(--accent); /* Track border */
+	background: var(--accent);
+	height: 8px;
+	border-radius: 10px;
+	border: 1px solid var(--accent);
 }
 
-/* WebKit (Chrome, Safari, Edge) - Thumb */
 .slider::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Remove default styling */
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  background: lightslategray; /* Thumb background */
-  border-radius: 50%; /* Circular thumb */
-  cursor: pointer;
-  transition: background 0.3s ease;
+	-webkit-appearance: none;
+	appearance: none;
+	width: 20px;
+	height: 20px;
+	background: lightslategray;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: background 0.3s ease;
 }
 
-/* Firefox - Progress */
 .slider::-moz-range-progress {
-  background: var(--primary); /* Progress background */
-  height: 8px;
-  border-radius: 5px;
+	background: var(--primary);
+	height: 8px;
+	border-radius: 5px;
 }
 
-/* Firefox - Track */
 .slider::-moz-range-track {
-  background: var(--accent); /* Track background */
-  height: 8px;
-  border-radius: 10px;
-  border: 1px solid var(--accent); /* Track border */
+	background: var(--accent);
+	height: 8px;
+	border-radius: 10px;
+	border: 1px solid var(--accent);
 }
 
-/* Firefox - Thumb */
 .slider::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
-  background: lightslategray; /* Thumb background */
-  border-radius: 50%; /* Circular thumb */
-  cursor: pointer;
-  transition: background 0.3s ease;
+	width: 20px;
+	height: 20px;
+	background: lightslategray;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: background 0.3s ease;
 }
 
-/* Internet Explorer - Track */
 .slider::-ms-track {
-  background: transparent; /* Remove default track styling */
-  border-color: transparent;
-  color: transparent;
-  height: 8px;
+	background: transparent;
+	border-color: transparent;
+	color: transparent;
+	height: 8px;
 }
 
-/* Internet Explorer - Progress (Lower Fill) */
 .slider::-ms-fill-lower {
-  background: var(--primary); /* Progress background */
-  border-radius: 5px;
+	background: var(--primary);
+	border-radius: 5px;
 }
 
-/* Internet Explorer - Remaining Track (Upper Fill) */
 .slider::-ms-fill-upper {
-  background: var(--accent); /* Track background */
-  border-radius: 10px;
-  border: 1px solid var(--accent); /* Track border */
+	background: var(--accent);
+	border-radius: 10px;
+	border: 1px solid var(--accent);
 }
 
-/* Internet Explorer - Thumb */
 .slider::-ms-thumb {
-  width: 20px;
-  height: 20px;
-  background: lightslategray; /* Thumb background */
-  border-radius: 50%; /* Circular thumb */
-  cursor: pointer;
-  transition: background 0.3s ease;
+	width: 20px;
+	height: 20px;
+	background: lightslategray;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: background 0.3s ease;
 }
 
 footer {
@@ -612,4 +618,76 @@ footer {
 .link:hover {
 	font-weight: 600;
 	font-size: 1.1rem;
+}
+
+@media screen and (max-width: 1200px) {
+	.type-set {
+		display: grid;
+		grid-template-columns: 2fr;
+		gap: 2rem;
+		justify-items: center;
+		align-items: start;
+	}
+	.slider-container {
+		grid-column: 1;
+		grid-row: 1;
+		width: 90%;
+		margin: -3rem auto 0 auto;
+	}
+
+	.letter-set {
+		grid-column: 1;
+		grid-row: 2;
+		width: 90%;
+		margin: 3rem auto;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.page-nav {
+		width: 100%;
+		margin-top: 1rem; /* Add spacing above the nav */
+	}
+
+	/* Align "MONASPACE" and "by Github" on the same line */
+	header {
+		flex-direction: column; /* Stack elements vertically */
+		align-items: center; /* Center elements horizontally */
+		text-align: center; /* Center text */
+	}
+
+	header h1 {
+		display: flex; /* Use flexbox to align items horizontally */
+		flex-direction: row; /* Ensure "MONASPACE" and "by Github" are on the same line */
+		justify-content: center; /* Center the items horizontally */
+		align-items: center; /* Align items vertically */
+		gap: 0.5rem; /* Add spacing between "MONASPACE" and "by Github" */
+		padding: 1rem 0; /* Add spacing around the heading */
+	}
+
+	header h1 > span {
+		display: inline; /* Ensure "by Github" stays inline */
+		margin-top: 0; /* Remove any top margin */
+	}
+
+	nav {
+		margin-top: 1rem; /* Add spacing above the nav */
+		width: 100%; /* Ensure nav spans the full width */
+		display: flex;
+	}
+
+	nav ul {
+		display: flex; /* Use flexbox for horizontal alignment */
+		flex-direction: row; /* Align items horizontally */
+		justify-content: space-evenly; /* Spread items evenly across the nav */
+		align-items: center; /* Align items vertically */
+		gap: 0; /* Remove any extra gap between items */
+		padding: 0; /* Remove padding */
+		list-style: none; /* Remove bullet points */
+		width: 100%; /* Ensure the nav spans the full width */
+	}
+
+	nav li {
+		padding: 0.5rem 1rem; /* Add horizontal and vertical padding for nav items */
+	}
 }
