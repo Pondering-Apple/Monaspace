@@ -1,16 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
-	typing();
-	const heroInput = document.getElementById("hero-input");
-	heroInput.addEventListener("input", function () {
-		customType();
-	});
+	updateFontProperties(); // Apply the current slider values to the font
+
+	// Add event listeners to update the font properties when sliders change
+	fontSizeSlider.addEventListener("input", updateFontProperties);
+	fontWeightSlider.addEventListener("input", updateFontProperties);
+	fontWidthSlider.addEventListener("input", updateFontProperties);
+	fontSlantSlider.addEventListener("input", updateFontProperties);
 });
 
-let i = 0;
-let txt = "MONASPACE By Github";
-let speed = 50; /* The speed/duration of the effect in milliseconds */
-let deleteDelay = 10000;
-let typeDelay = 3000;
 let fontStyles = [
 	"MonaspaceArgon",
 	"MonaspaceKrypton",
@@ -38,48 +35,60 @@ output2.innerHTML = slider2.value;
 output3.innerHTML = slider3.value;
 output4.innerHTML = slider4.value;
 
-function fontStyle() {
-	let randomKey = Math.floor(Math.random() * 5) + 1; // Generate a random number between 1 and 5
-	select[randomKey](); // Call the corresponding function
-}
-
 function argonChange() {
 	document.body.style.fontFamily = fontStyles[0];
 	document.documentElement.style.setProperty("--primary", "#89deff");
 	document.documentElement.style.setProperty("--secondary", "#c4ebff");
 	document.documentElement.style.setProperty("--accent", "#314246");
+	document.documentElement.style.setProperty(
+		"--default-cursor",
+		`url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="%23314246" stroke="%2389DEFF" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'),
+		auto`
+	);
 }
 function kryptonChange() {
 	document.body.style.fontFamily = fontStyles[1];
 	document.documentElement.style.setProperty("--primary", "#b889ff");
 	document.documentElement.style.setProperty("--secondary", "#dcc4ff");
 	document.documentElement.style.setProperty("--accent", "#372f46");
+	document.documentElement.style.setProperty(
+		"--default-cursor",
+		`url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="%23372F46" stroke="%23B889FF" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'),
+		auto`
+	);
 }
 function neonChange() {
 	document.body.style.fontFamily = fontStyles[2];
 	document.documentElement.style.setProperty("--primary", "#fe7e73");
 	document.documentElement.style.setProperty("--secondary", "#ffb9b3");
 	document.documentElement.style.setProperty("--accent", "#442d2b");
+	document.documentElement.style.setProperty(
+		"--default-cursor",
+		`url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="%23442D2B" stroke="%23FE7E73" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'),
+		auto`
+	);
 }
 function radonChange() {
 	document.body.style.fontFamily = fontStyles[3];
 	document.documentElement.style.setProperty("--primary", "#fef073");
 	document.documentElement.style.setProperty("--secondary", "#fff7af");
 	document.documentElement.style.setProperty("--accent", "#44422b");
+	document.documentElement.style.setProperty(
+		"--default-cursor",
+		`url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="%2344422B" stroke="%23FEF073" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'),
+		auto`
+	);
 }
 function xenonChange() {
 	document.body.style.fontFamily = fontStyles[4];
 	document.documentElement.style.setProperty("--primary", "#4cffa0");
 	document.documentElement.style.setProperty("--secondary", "#8bffc1");
 	document.documentElement.style.setProperty("--accent", "#244633");
-}
-
-function typing() {
-	if (i < txt.length) {
-		document.getElementById("hero-type").innerHTML += txt.charAt(i);
-		i++;
-		setTimeout(typing, speed);
-	}
+	document.documentElement.style.setProperty(
+		"--default-cursor",
+		`url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="%23244633" stroke="%234CFFA0" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'),
+		auto`
+	);
 }
 
 slider1.oninput = function () {
@@ -123,13 +132,8 @@ function updateFontProperties() {
 	letterSet.style.fontVariationSettings = `"wght" ${fontWeightSlider.value}, "wdth" ${fontWidthSlider.value}, "slnt" ${fontSlantSlider.value}`;
 }
 
-// Initialize the font properties on page load
-document.addEventListener("DOMContentLoaded", () => {
-	updateFontProperties(); // Apply the current slider values to the font
-
-	// Add event listeners to update the font properties when sliders change
-	fontSizeSlider.addEventListener("input", updateFontProperties);
-	fontWeightSlider.addEventListener("input", updateFontProperties);
-	fontWidthSlider.addEventListener("input", updateFontProperties);
-	fontSlantSlider.addEventListener("input", updateFontProperties);
-});
+function customType() {
+	let input = document.getElementById("custom-input").value; // Use .value to get the input value
+	let hero = document.getElementById("custom text");
+	hero.innerHTML = input; // Update the hero-type element with the input value
+}

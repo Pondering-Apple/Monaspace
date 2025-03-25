@@ -26,21 +26,45 @@
 	--primary: #89deff;
 	--secondary: #c4ebff;
 	--accent: #314246;
+	--default-cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="%23314246" stroke="%2389DEFF" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'),
+		auto;
+	--default-pointer: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="36" viewBox="0 0 24 24"><path fill="%23314246" stroke="%2389DEFF" stroke-width="1.75" stroke-linejoin="round" d="M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z"></path></svg>'),
+		auto;
 	--argon-primary: #89deff;
 	--argon-secondary: #c4ebff;
 	--argon-accent: #314246;
+	--argon-cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="%23314246" stroke="%2389DEFF" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'),
+		auto;
+	--argon-pointer: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"><path fill="%23314246" stroke="%2389DEFF" stroke-width="1.75" stroke-linejoin="round" d="M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z"></path></svg>'),
+		auto;
 	--krypton-primary: #b889ff;
 	--krypton-secondary: #dcc4ff;
 	--krypton-accent: #372f46;
+	--krypton-cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="%23372F46" stroke="%23B889FF" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'),
+		auto;
+	--krypton-pointer: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"><path fill="%23314246" stroke="%2389DEFF" stroke-width="1.75" stroke-linejoin="round" d="M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z"></path></svg>'),
+		auto;
 	--neon-primary: #fe7e73;
 	--neon-secondary: #ffb9b3;
 	--neon-accent: #442d2b;
+	--neon-cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="%23442D2B" stroke="%23FE7E73" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'),
+		auto;
+	--neon-pointer: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"><path fill="%23314246" stroke="%2389DEFF" stroke-width="1.75" stroke-linejoin="round" d="M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z"></path></svg>'),
+		auto;
 	--radon-primary: #fef073;
 	--radon-secondary: #fff7af;
 	--radon-accent: #44422b;
+	--radon-cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="%2344422B" stroke="%23FEF073" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'),
+		auto;
+	--radon-pointer: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"><path fill="%23314246" stroke="%2389DEFF" stroke-width="1.75" stroke-linejoin="round" d="M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z"></path></svg>'),
+		auto;
 	--xenon-primary: #4cffa0;
 	--xenon-secondary: #8bffc1;
 	--xenon-accent: #244633;
+	--xenon-cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="%23244633" stroke="%234CFFA0" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'),
+		auto;
+	--xenon-pointer: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"><path fill="%23314246" stroke="%2389DEFF" stroke-width="1.75" stroke-linejoin="round" d="M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z"></path></svg>'),
+		auto;
 }
 
 * {
@@ -61,6 +85,7 @@ body {
 	font-family: "MonaspaceArgon";
 	display: flex;
 	justify-content: center;
+	cursor: var(--default-cursor);
 }
 
 header {
@@ -135,6 +160,7 @@ a:visited {
 
 .heading {
 	color: var(--primary);
+	text-shadow: 0 2px 10px var(--primary);
 }
 
 .scroll-fade {
@@ -156,31 +182,47 @@ a:visited {
 	background-size: cover;
 	justify-content: center;
 	align-items: center;
-	font-family: "MonaspaceArgon";
 	position: relative;
 }
-
-.hero-type {
-	border-right: 0.15em solid var(--background);
-	font-size: 2.6rem;
-	animation: blinking 1s infinite;
+.animation-container {
+	display: inline-block;
+}
+.typed-out {
+	overflow: hidden;
+	border-right: 0.1em solid var(--primary);
+	white-space: nowrap;
+	animation: typing 2s steps(19, end) forwards, blinking 0.8s infinite;
+	font-size: 3rem;
+	width: 0;
+	border-radius: 0.1rem;
 }
 
-.hero-input {
-	padding: 0.3125rem;
-	width: 30%;
-	height: 2rem;
-	display: block;
-	position: absolute;
-	bottom: 0.625rem;
+.typed-out-gh {
+	font-size: 2rem;
 }
 
+@keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
 @keyframes blinking {
 	from {
 		border-color: transparent;
 	}
 	to {
 		border-color: var(--primary);
+	}
+}
+@keyframes deleting {
+	from {
+		width: 100%;
+	}
+	to {
+		width: 0%;
 	}
 }
 
@@ -198,13 +240,7 @@ a:visited {
 .font-type-wrapper {
 	overflow-x: auto;
 	white-space: nowrap;
-	/* padding: 0 0 1rem 3rem; */
 }
-
-/* .font-type {
-	display: flex;
-	padding: 0 1rem;
-} */
 
 .card {
 	flex: 0 0 auto;
@@ -238,7 +274,11 @@ a:visited {
 	color: var(--argon-primary);
 	background-color: var(--argon-accent);
 	border-color: var(--argon-primary);
+	/* transition: all 1s; */
 }
+/* .argon:hover {
+	cursor: var(--krypton-cursor);
+} */
 .krypton {
 	font-family: "MonaspaceKrypton";
 	color: var(--krypton-primary);
@@ -281,6 +321,7 @@ body.container {
 	position: relative;
 	text-align: left;
 	transition: all 0.5s;
+	/* cursor: pointer; */
 }
 
 @property --angle {
@@ -465,7 +506,7 @@ body.container {
 
 .slider {
 	appearance: none;
-	width: 100%;
+	width: 99%;
 	height: 8px;
 	background: var(--secondary);
 	border-radius: 5px;
@@ -473,23 +514,24 @@ body.container {
 	transition: var(--background) 0.3s ease;
 }
 
-.custom-text {
+.custom-input {
 	margin: 1rem 0 2rem 0;
 	appearance: none;
-	width: 100%;
+	width: 97%;
 	height: 1rem;
 	border-radius: 5px;
 	padding: 3px 5px;
 	background-color: var(--background-tertiary);
 	color: white;
 	transition: all 0.3s;
+	caret-color: var(--primary);
 }
 
-.custom-text:hover {
+.custom-input:hover {
 	outline: 3px solid var(--accent);
 }
 
-.custom-text:focus {
+.custom-input:focus {
 	outline: 3px solid var(--primary);
 }
 
@@ -499,7 +541,7 @@ body.container {
 	height: 40px;
 	background: var(--primary);
 	border-radius: 50%;
-	cursor: pointer;
+	cursor: var(--default-pointer);
 	transition: background 0.3s ease;
 }
 
@@ -508,7 +550,7 @@ body.container {
 	height: 20px;
 	background: lightslategray;
 	border-radius: 50%;
-	cursor: pointer;
+	cursor: var(--default-pointer);
 	transition: background 0.3s ease;
 }
 
@@ -534,6 +576,7 @@ body.container {
 	border-radius: 10px;
 	outline: none;
 	transition: background 0.3s ease;
+	cursor: var(--default-cursor);
 }
 
 .slider::-webkit-slider-runnable-track {
@@ -601,6 +644,31 @@ body.container {
 	border-radius: 50%;
 	cursor: pointer;
 	transition: background 0.3s ease;
+}
+
+.download {
+	text-align: center;
+}
+
+.download-btn {
+	font-size: 1.2rem;
+	padding: 0.5rem 1.5rem;
+	border-radius: 10px;
+	margin-top: 2.5rem;
+	margin-bottom: 2rem;
+	background-color: #242424;
+	border: 3px solid var(--primary);
+	transition: all 0.5s;
+}
+.download-btn:hover {
+	font-size: 1.3rem;
+	background-color: var(--accent);
+}
+.download-btn > a {
+	color: white;
+}
+.download-btn:hover a {
+	font-weight: 600;
 }
 
 footer {
