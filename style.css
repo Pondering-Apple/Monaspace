@@ -98,7 +98,7 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	border-bottom: 0.1875rem solid black;
+	border-bottom: 0.1875rem solid var(--background-tertiary);
 }
 
 header h1 {
@@ -191,7 +191,9 @@ a:visited {
 	overflow: hidden;
 	border-right: 0.1em solid var(--primary);
 	white-space: nowrap;
-	animation: typing 2s steps(19, end) forwards, blinking 0.8s infinite;
+	animation: typing 2s steps(19, end) forwards, blinking 0.8s infinite,
+		showcase-font 10s infinite ease-in-out;
+	font-variation-settings: "wght" 100, "wdth" 75, "slnt" 0;
 	font-size: 3rem;
 	width: 0;
 	border-radius: 0.1rem;
@@ -217,15 +219,35 @@ a:visited {
 		border-color: var(--primary);
 	}
 }
-@keyframes deleting {
-	from {
-		width: 100%;
+@keyframes showcase-font {
+	0% {
+		font-variation-settings: "wght" 100, "wdth" 75, "slnt" 0;
 	}
-	to {
-		width: 0%;
+	12.5% {
+		font-variation-settings: "wght" 400, "wdth" 100, "slnt" -10;
+	}
+	25% {
+		font-variation-settings: "wght" 700, "wdth" 125, "slnt" 0;
+	}
+	37.5% {
+		font-variation-settings: "wght" 900, "wdth" 150, "slnt" 10;
+	}
+	50% {
+		font-variation-settings: "wght" 100, "wdth" 125, "slnt" 0;
+	}
+	62.5% {
+		font-variation-settings: "wght" 900, "wdth" 150, "slnt" 10;
+	}
+	75% {
+		font-variation-settings: "wght" 700, "wdth" 125, "slnt" 0;
+	}
+	87.5% {
+		font-variation-settings: "wght" 400, "wdth" 100, "slnt" -10;
+	}
+	100% {
+		font-variation-settings: "wght" 100, "wdth" 75, "slnt" 0;
 	}
 }
-
 .superfamily {
 	text-align: center;
 	font-size: 2rem;
@@ -247,7 +269,7 @@ a:visited {
 }
 
 .card:first-child {
-	margin-left: 1rem; /* Pushes the first card to the right */
+	margin-left: 1rem;
 }
 
 .card:last-child {
@@ -265,7 +287,7 @@ a:visited {
 }
 
 .spacer {
-	width: 2rem; /* Adjust for more or less space */
+	width: 2rem;
 	height: 100%;
 }
 
@@ -274,11 +296,8 @@ a:visited {
 	color: var(--argon-primary);
 	background-color: var(--argon-accent);
 	border-color: var(--argon-primary);
-	/* transition: all 1s; */
 }
-/* .argon:hover {
-	cursor: var(--krypton-cursor);
-} */
+
 .krypton {
 	font-family: "MonaspaceKrypton";
 	color: var(--krypton-primary);
@@ -533,6 +552,10 @@ body.container {
 
 .custom-input:focus {
 	outline: 3px solid var(--primary);
+}
+
+.custom-text {
+	margin-top: 3rem;
 }
 
 .slider::-webkit-slider-thumb {
