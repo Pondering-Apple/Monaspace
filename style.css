@@ -152,10 +152,62 @@ nav li:hover a {
 a {
 	transition: font-size 0.5s ease, font-weight 0.5s ease;
 	text-decoration: none;
-	color: white;
+	color: var(--primary);
 }
 a:visited {
 	color: var(--primary);
+}
+
+.L1,
+.L2,
+.L3,
+.L4,
+.L5 {
+	animation: colourChange 10s infinite;
+}
+
+.L1 {
+	font-family: "MonaspaceArgon";
+}
+
+.L2 {
+	font-family: "MonaspaceKrypton";
+}
+.L3 {
+	font-family: "MonaspaceNeon";
+}
+.L4 {
+	font-family: "MonaspaceRadon";
+}
+.L5 {
+	font-family: "MonaspaceXenon";
+}
+
+@keyframes colourChange {
+	0% {
+		color: var(--argon-primary);
+		text-shadow: 0 2px 10px var(--argon-secondary);
+	}
+	20% {
+		color: var(--krypton-primary);
+		text-shadow: 0 2px 10px var(--krypton-secondary);
+	}
+	40% {
+		color: var(--neon-primary);
+		text-shadow: 0 2px 10px var(--neon-secondary);
+	}
+	60% {
+		color: var(--radon-primary);
+		text-shadow: 0 2px 10px var(--radon-secondary);
+	}
+	80% {
+		color: var(--xenon-primary);
+		text-shadow: 0 2px 10px var(--xenon-secondary);
+	}
+	100% {
+		color: var(--argon-primary);
+		text-shadow: 0 2px 10px var(--argon-secondary);
+	}
 }
 
 .heading {
