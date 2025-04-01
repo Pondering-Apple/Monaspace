@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<meta
+			name="description"
+			content="Monaspace is a modern monospaced font superfamily developed by GitHub Next, designed to improve the coding experience with readability, aesthetics, and flexibility."
+		/>
+		<meta
+			name="keywords"
+			content="Monaspace, GitHub, font, typography, monospaced, coding, design, superfamily, noble gases, Neon, Argon, Xenon, Radon, Krypton"
+		/>
+		<meta name="author" content="Joshua Karbowiak" />
+		<meta name="robots" content="index, follow" />
+		<meta property="og:title" content="MONASPACE" />
+		<meta
+			property="og:description"
+			content="Explore Monaspace, a modern monospaced font superfamily developed by GitHub Next, designed for a better coding experience."
+		/>
+		<meta property="og:image" content="path/to/your/image.jpg" />
+		<meta property="og:url" content="https://monaspace.githubnext.com/" />
+		<meta property="og:type" content="website" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="MONASPACE" />
+		<meta
+			name="twitter:description"
+			content="Discover Monaspace, a modern monospaced font superfamily by GitHub Next, enhancing coding aesthetics and readability."
+		/>
+		<meta name="twitter:image" content="path/to/your/image.jpg" />
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="style.css" />
-		<title>MONASPACE SUPER FAMILY</title>
+		<title>MONASPACE</title>
 	</head>
-	<body>
+	<body class="container">
 		<header>
-			<h1 class="page-title" onclick="closeNav()">
+			<h1 class="page-title">
 				<div>
 					<span class="L1">M</span><span class="L2">O</span
 					><span class="L3">N</span><span class="L4">A</span
@@ -16,186 +41,275 @@
 					><span class="L2">A</span><span class="L3">C</span
 					><span class="L4">E</span>
 				</div>
-				<span
-					><a href="https://monaspace.githubnext.com/" target="_blank"
-						>by Github</a
-					></span
-				>
 			</h1>
 			<nav class="page-nav">
 				<ul>
-					<li><a href="#">History</a></li>
-					<li><a href="#">Variations</a></li>
-					<li class="dropdown-li" id="characterSet" onclick="openNav()">
-						<a>Font Family</a>
-					</li>
+					<li><a href="#history">History</a></li>
+					<li><a href="#variations">Variations</a></li>
 				</ul>
 			</nav>
 		</header>
-		<main id="content">
-			<div id="myNav" class="overlay">
-				<div class="overlay-content">
-					<div class="font-type argon" onclick="argonChange()">
-						<div class="title">
-							<p class="name">Argon</p>
-							<p class="type">Humanist Sans</p>
-						</div>
-						<div class="family">
-							<p>
-								Monaspace <br />
-								Superfamily Font
-							</p>
-						</div>
-						<div class="example-text">
-							<p>
-								Zebra <br />
-								Adorable <br />
-								Xylophone <br />
-								Dimension <br />
-								Moondust <br />
-								Geography
-							</p>
-						</div>
-					</div>
-					<div class="font-type krypton" onclick="kryptonChange()">
-						<div class="title">
-							<p class="name">Krypton</p>
-							<p class="type">Mechanical Sans</p>
-						</div>
-						<div class="family">
-							<p>
-								Monaspace <br />
-								Superfamily Font
-							</p>
-						</div>
-						<div class="example-text">
-							<p>
-								Lighthouse <br />
-								Backyard <br />
-								Journaled <br />
-								Trampled <br />
-								Overcome <br />
-								Whiskers
-							</p>
-						</div>
-					</div>
-					<div class="font-type neon" onclick="neonChange()">
-						<div class="title">
-							<p class="name">Neon</p>
-							<p class="type">Neo-grotesque Sans</p>
-						</div>
-						<div class="family">
-							<p>
-								Monaspace <br />
-								Superfamily Font
-							</p>
-						</div>
-						<div class="example-text">
-							<p>
-								Cypress <br />
-								Mandolin<br />
-								Jubilant <br />
-								Freight <br />
-								Slouched <br />
-								Boulders
-							</p>
-						</div>
-					</div>
-					<div class="font-type radon" onclick="radonChange()">
-						<div class="title">
-							<p class="name">Radon</p>
-							<p class="type">Handwriting</p>
-						</div>
-						<div class="family">
-							<p>
-								Monaspace <br />
-								Superfamily Font
-							</p>
-						</div>
-						<div class="example-text">
-							<p>
-								Graphite <br />
-								Conquest <br />
-								Drizzled <br />
-								Lanterns <br />
-								Swindle <br />
-								Junction
-							</p>
-						</div>
-					</div>
-					<div class="font-type xenon" onclick="xenonChange()">
-						<div class="title">
-							<p class="name">Xenon</p>
-							<p class="type">Slab Serif</p>
-						</div>
-						<div class="family">
-							<p>
-								Monaspace <br />
-								Superfamily Font
-							</p>
-						</div>
-						<div class="example-text">
-							<p>
-								Vortexes <br />
-								Chompers <br />
-								Wildfire <br />
-								Sunbeams<br />
-								Jackpots <br />
-								Branded
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
+		<main>
 			<section id="hero" class="hero">
-				<div id="hero-type" class="hero-type"></div>
-				<input id="hero-input" class="hero-input" type="search" />
-			</section>
-			<section class="history">
-				<div class="history-text">
-					<p>
-						Monaspace is a modern monospaced font superfamily developed by
-						GitHub Next, designed to improve the coding experience with a
-						balance of readability, aesthetics, and flexibility. Unlike
-						traditional monospaced fonts, which can often feel rigid or uneven
-						in texture, Monaspace introduces "Texture Healing," a technique that
-						smooths out text density to resemble proportional type while
-						maintaining the essential grid structure of monospace. The font
-						family consists of five distinct yet interchangeable typefaces—Neon,
-						Argon, Xenon, Radon, and Krypton—each bringing its own unique style
-						while remaining metrics-compatible. This allows developers to mix
-						and match fonts without disrupting layout or alignment, fostering a
-						more expressive and personalized coding environment.
-					</p>
-				</div>
-				<div class="superFamily">
-					<p>MONASPACE</p>
-					<p>is a</p>
-					<p>SUPERFAMILY</p>
-					<p>of</p>
-					<p>5 FONTS</p>
-					<p>in the</p>
-					<p>ONE FAMILY</p>
-				</div>
-				<div class="history-text">
-					<p>
-						GitHub's choice to name the fonts after noble gases is more than
-						just a thematic decision—it reflects the shared characteristics
-						between these elements and Monaspace itself. Noble gases are
-						consistent yet diverse, each with distinct properties while adhering
-						to the same fundamental principles. Similarly, the Monaspace fonts
-						are unified in their design philosophy yet offer unique stylistic
-						variations suited for different preferences. By drawing inspiration
-						from science and typography, Monaspace redefines what a monospaced
-						font can be, offering developers a visually engaging and technically
-						refined alternative to traditional coding fonts.
-					</p>
+				<!-- <div id="hero-type" class="hero-type"></div> -->
+				<div class="animation-container">
+					<div class="typed-out">MONASPACE</div>
 				</div>
 			</section>
-			<!-- <section>texture healing and ligature</section> -->
-			<section id="font-set" class="font-set"></section>
-			<section>Download Font Here</section>
-			<footer>I designed this whole thing. I am so good</footer>
+			<section class="superfamily">
+				<p>
+					<br />It's a <br />
+					<span class="bigLetters">SUPERFAMILY</span>
+				</p>
+			</section>
+			<section class="font-type-wrapper">
+				<div class="font-type scroll-fade">
+					<div>
+						<p><br /></p>
+					</div>
+					<div class="card argon" onclick="argonChange()">
+						<p class="symbol">Ar</p>
+						<p class="name">Argon</p>
+						<p class="type">Humanist Sans</p>
+						<p class="word-list">
+							Vertex<br />
+							Quirk<br />
+							Zodiac
+						</p>
+					</div>
+					<div class="card krypton" onclick="kryptonChange()">
+						<p class="symbol">Kr</p>
+						<p class="name">Krypton</p>
+						<p class="type">Mechanical Sans</p>
+						<p class="word-list">
+							Nimbus<br />
+							Glitch<br />
+							Jovial
+						</p>
+					</div>
+					<div class="card neon" onclick="neonChange()">
+						<p class="symbol">Ne</p>
+						<p class="name">Neon</p>
+						<p class="type">Neo-grotesque Sans</p>
+						<p class="word-list">
+							Phantom<br />
+							Breeze<br />
+							Vortex
+						</p>
+					</div>
+					<div class="card radon" onclick="radonChange()">
+						<p class="symbol">Rn</p>
+						<p class="name">Radon</p>
+						<p class="type">Handwriting</p>
+						<p class="word-list">
+							Mosaic<br />
+							Flicker<br />
+							Echoes
+						</p>
+					</div>
+					<div class="card xenon" onclick="xenonChange()">
+						<p class="symbol">Xe</p>
+						<p class="name">Xenon</p>
+						<p class="type">Slab Serif</p>
+						<p class="word-list">
+							Zephyr<br />
+							Havoc<br />
+							Mystic
+						</p>
+					</div>
+					<div>
+						<p><br /></p>
+					</div>
+				</div>
+			</section>
+			<section class="superfamily scroll-fade">
+				<p>
+					<span class="bigLetters">FIVE FONTS</span> <br />in the <br />
+					<span class="bigLetters">ONE FAMILY</span>
+				</p>
+			</section>
+			<section id="history" class="history scroll-fade">
+				<p>
+					Monaspace is a modern monospaced font superfamily developed by GitHub
+					Next, designed to improve the coding experience with a balance of
+					readability, aesthetics, and flexibility. Unlike traditional
+					monospaced fonts, which can often feel rigid or uneven in texture,
+					Monaspace introduces “Texture Healing,” a technique that smooths out
+					text density to resemble proportional type while maintaining the
+					essential grid structure of monospace. The font family consists of
+					five distinct yet interchangeable typefaces—Neon, Argon, Xenon, Radon,
+					and Krypton—each bringing its own unique style while remaining
+					metrics-compatible. This allows developers to mix and match fonts
+					without disrupting layout or alignment, fostering a more expressive
+					and personalized coding environment.
+				</p>
+				<p>
+					GitHub’s choice to name the fonts after noble gases is more than just
+					a thematic decision—it reflects the shared characteristics between
+					these elements and Monaspace itself. Noble gases are consistent yet
+					diverse, each with distinct properties while adhering to the same
+					fundamental principles. Similarly, the Monaspace fonts are unified in
+					their design philosophy yet offer unique stylistic variations suited
+					for different preferences. By drawing inspiration from science and
+					typography, Monaspace redefines what a monospaced font can be,
+					offering developers a visually engaging and technically refined
+					alternative to traditional coding fonts.
+				</p>
+			</section>
+			<section id="variations" class="type-set scroll-fade">
+				<div class="letter-set scroll-fade">
+					<span class="letter">A</span>
+					<span class="letter">B</span>
+					<span class="letter">C</span>
+					<span class="letter">D</span>
+					<span class="letter">E</span>
+					<span class="letter">F</span>
+					<span class="letter">G</span>
+					<span class="letter">H</span>
+					<span class="letter">I</span>
+					<span class="letter">J</span>
+					<span class="letter">K</span>
+					<span class="letter">L</span>
+					<span class="letter">M</span>
+					<span class="letter">N</span>
+					<span class="letter">O</span>
+					<span class="letter">P</span>
+					<span class="letter">Q</span>
+					<span class="letter">R</span>
+					<span class="letter">S</span>
+					<span class="letter">T</span>
+					<span class="letter">U</span>
+					<span class="letter">V</span>
+					<span class="letter">W</span>
+					<span class="letter">X</span>
+					<span class="letter">Y</span>
+					<span class="letter">Z</span>
+					<span class="number">0</span>
+					<span class="number">1</span>
+					<span class="number">2</span>
+					<span class="number">3</span>
+					<span class="number">4</span>
+					<span class="number">5</span>
+					<span class="number">6</span>
+					<span class="number">7</span>
+					<span class="number">8</span>
+					<span class="number">9</span>
+					<span class="special-char">!</span>
+					<span class="special-char">@</span>
+					<span class="special-char">#</span>
+					<span class="special-char">$</span>
+					<span class="special-char">%</span>
+					<span class="special-char">^</span>
+					<span class="special-char">&</span>
+					<span class="special-char">*</span>
+					<span class="special-char">(</span>
+					<span class="special-char">)</span>
+					<span class="special-char">_</span>
+					<span class="special-char">+</span>
+					<span class="special-char">-</span>
+					<span class="special-char">=</span>
+					<span class="special-char">{</span>
+					<span class="special-char">}</span>
+					<span class="special-char">[</span>
+					<span class="special-char">]</span>
+					<span class="special-char">|</span>
+					<span class="special-char">\</span>
+					<span class="special-char">:</span>
+					<span class="special-char">;</span>
+					<span class="special-char">"</span>
+					<span class="special-char">'</span>
+					<span class="special-char"><</span>
+					<span class="special-char">></span>
+					<span class="special-char">,</span>
+					<span class="special-char">.</span>
+					<span class="special-char">?</span>
+					<span class="special-char">/</span>
+					<div class="custom-text" id="custom-text"></div>
+				</div>
+
+				<!-- <div class="card slider-container scroll-fade"> -->
+				<div class="card slider-container">
+					<p>Move the sliders to change their axis</p>
+					<div>
+						<p>Font Size: <span id="axis1"></span></p>
+						<input
+							id="axis1-slider"
+							class="slider"
+							type="range"
+							min="10"
+							max="50"
+							value="38"
+						/>
+					</div>
+					<div>
+						<p>Weight: <span id="axis2"></span></p>
+						<input
+							id="axis2-slider"
+							class="slider"
+							type="range"
+							min="100"
+							max="900"
+							value="400"
+						/>
+					</div>
+					<div>
+						<p>Width: <span id="axis3"></span></p>
+						<input
+							id="axis3-slider"
+							class="slider"
+							type="range"
+							min="100"
+							max="125"
+							value="100"
+						/>
+					</div>
+					<div>
+						<p>Slant: <span id="axis4"></span></p>
+						<input
+							id="axis4-slider"
+							class="slider"
+							type="range"
+							min="-11"
+							max="0"
+							value="0"
+						/>
+					</div>
+					<div>
+						<label> Create your own</label>
+						<input id="custom-input" type="text" class="custom-input" />
+					</div>
+				</div>
+
+				<!-- 
+				</div> -->
+			</section>
+			<section class="download">
+				<p>Like Monaspace? <br />Get it here.</p>
+				<button class="download-btn">
+					<a href="Monaspace_Font.zip" download="Monaspace_Font">Download</a>
+				</button>
+				<button class="download-btn">
+					<a href="https://monaspace.githubnext.com/">Website</a>
+				</button>
+			</section>
+			<footer class="scroll-fade">
+				<p>
+					Website designed and created by Joshua Karbowiak <br />
+					Font created as a Github Project.
+					<br />
+					<a
+						class="link"
+						href="https://github.com/githubnext/monaspace/tree/main"
+						>Repo</a
+					>
+					<span> </span>
+					<a
+						class="link"
+						href="https://github.com/githubnext/monaspace/blob/main/CONTRIBUTORS.txt"
+						>Collaborators</a
+					>
+				</p>
+			</footer>
 		</main>
 		<script src="script.js"></script>
 	</body>
